@@ -2,6 +2,12 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Globe, Megaphone, TrendingUp, Bot, Globe2, Zap, Target } from "lucide-react";
+import heroImage from "@/assets/hero-consulting.jpg";
+import servicesImage from "@/assets/services-automation.jpg";
+import webDesignImage from "@/assets/service-web-design.jpg";
+import socialMediaImage from "@/assets/service-social-media.jpg";
+import seoMarketingImage from "@/assets/service-seo-marketing.jpg";
+import aiAutomationImage from "@/assets/service-ai-automation.jpg";
 
 const Home = () => {
   const services = [
@@ -9,21 +15,25 @@ const Home = () => {
       icon: Globe,
       title: "Website Design & Build",
       description: "Build digital real estate that sells.",
+      image: webDesignImage,
     },
     {
       icon: Megaphone,
       title: "Social Media Content Package",
       description: "Turn your content into cash flow.",
+      image: socialMediaImage,
     },
     {
       icon: TrendingUp,
       title: "SEO & Marketing Campaigns",
       description: "Rank higher. Convert faster.",
+      image: seoMarketingImage,
     },
     {
       icon: Bot,
       title: "AI Automations for Your Business",
       description: "Work 30% less, grow 2× faster.",
+      image: aiAutomationImage,
     },
   ];
 
@@ -45,10 +55,14 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src={heroImage} alt="Professional consulting team" className="w-full h-full object-cover opacity-20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background"></div>
+        </div>
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight">
               Make Your Business Earn{" "}
               <span className="relative">
                 <span className="relative z-10">While You Sleep.</span>
@@ -101,7 +115,7 @@ const Home = () => {
       <section className="py-20 bg-secondary/50">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">What We Do</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">What We Do</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Services that turn your business into a revenue machine
             </p>
@@ -109,12 +123,15 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {services.map((service, index) => (
-              <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth border-2">
+              <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth border-2 overflow-hidden">
+                <div className="h-48 overflow-hidden">
+                  <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
+                </div>
                 <CardHeader>
                   <div className="h-14 w-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                     <service.icon className="h-7 w-7 text-foreground" />
                   </div>
-                  <CardTitle className="text-2xl">{service.title}</CardTitle>
+                  <CardTitle className="font-serif text-2xl">{service.title}</CardTitle>
                   <CardDescription className="text-lg text-foreground/80">{service.description}</CardDescription>
                 </CardHeader>
               </Card>
@@ -134,7 +151,7 @@ const Home = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <Card className="max-w-4xl mx-auto shadow-hover border-2">
             <CardContent className="p-12 md:p-16 text-center">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
                 Let's automate your growth
               </h2>
               <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">

@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Globe, Megaphone, TrendingUp, Bot, Check } from "lucide-react";
+import servicesImage from "@/assets/services-automation.jpg";
 
 const Services = () => {
   const services = [
@@ -56,7 +57,7 @@ const Services = () => {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">
             Services That{" "}
             <span className="relative">
               <span className="relative z-10">Actually Scale</span>
@@ -69,6 +70,11 @@ const Services = () => {
           <div className="h-1 w-24 bg-foreground mx-auto mt-8"></div>
         </div>
 
+        {/* Hero Image */}
+        <div className="max-w-6xl mx-auto mb-16">
+          <img src={servicesImage} alt="AI and automation services" className="w-full h-[400px] object-cover rounded-2xl shadow-hover" />
+        </div>
+
         {/* Services Grid */}
         <div className="space-y-8 max-w-6xl mx-auto mb-16">
           {services.map((service, index) => (
@@ -79,7 +85,7 @@ const Services = () => {
                     <service.icon className="h-8 w-8 text-foreground" />
                   </div>
                   <div className="flex-1">
-                    <CardTitle className="text-3xl mb-2">{service.title}</CardTitle>
+                    <CardTitle className="font-serif text-3xl mb-2">{service.title}</CardTitle>
                     <p className="text-xl font-semibold text-foreground/80">{service.tagline}</p>
                   </div>
                 </div>
@@ -102,20 +108,15 @@ const Services = () => {
         <div className="max-w-4xl mx-auto">
           <Card className="shadow-hover border-2">
             <CardContent className="p-12 md:p-16 text-center">
-              <h2 className="text-4xl font-bold mb-6">
-                Don't overthink. Pick a plan.
+              <h2 className="font-serif text-4xl font-bold mb-6">
+                Ready to scale your business?
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                We'll make sure it pays for itself.
+                Book a free audit and we'll show you how to 2× your efficiency in 30 days.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild>
-                  <Link to="/pricing">View Pricing</Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link to="/contact">Book Free Audit</Link>
-                </Button>
-              </div>
+              <Button size="lg" asChild>
+                <Link to="/contact">Book Free Audit</Link>
+              </Button>
             </CardContent>
           </Card>
         </div>

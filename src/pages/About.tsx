@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Lightbulb, Shield, Target, Zap } from "lucide-react";
+import aboutTeamImage from "@/assets/about-team.jpg";
 
 const About = () => {
   const beliefs = [
@@ -27,7 +28,7 @@ const About = () => {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">
             We Don't Sell Design.{" "}
             <span className="relative">
               <span className="relative z-10">We Sell Performance.</span>
@@ -35,6 +36,11 @@ const About = () => {
             </span>
           </h1>
           <div className="h-1 w-24 bg-foreground mx-auto mt-8"></div>
+        </div>
+
+        {/* Team Image */}
+        <div className="max-w-5xl mx-auto mb-16">
+          <img src={aboutTeamImage} alt="Our team collaborating" className="w-full h-[400px] object-cover rounded-2xl shadow-hover" />
         </div>
 
         {/* About Content */}
@@ -59,7 +65,7 @@ const About = () => {
 
         {/* Core Beliefs */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-center mb-12">Core Beliefs</h2>
+          <h2 className="font-serif text-4xl font-bold text-center mb-12">Core Beliefs</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {beliefs.map((belief, index) => (
               <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth border-2">
@@ -79,7 +85,7 @@ const About = () => {
         <div className="max-w-3xl mx-auto">
           <Card className="shadow-soft border-2">
             <CardContent className="p-10 md:p-12 text-center">
-              <h2 className="text-3xl font-bold mb-6">Let's Build Something That Works</h2>
+              <h2 className="font-serif text-3xl font-bold mb-6">Let's Build Something That Works</h2>
               <p className="text-lg text-muted-foreground mb-8">
                 Ready to scale smarter? Book a free consultation and see how we can transform your operations.
               </p>
