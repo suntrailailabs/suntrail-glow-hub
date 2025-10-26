@@ -1,56 +1,52 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Globe, Megaphone, TrendingUp, Bot, CheckCircle } from "lucide-react";
+import { Globe, Megaphone, TrendingUp, Bot, Check } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
       icon: Globe,
       title: "Website Design & Build",
-      description:
-        "Custom-built responsive websites tailored to your brand and business goals. We create digital experiences that convert visitors into customers.",
+      tagline: "Build digital real estate that sells.",
       features: [
-        "Custom-built responsive websites (landing pages, booking sites, ecommerce)",
-        "Fast-loading, SEO-optimized, analytics-ready",
-        "Blog setup, CMS integration, payment gateways",
-        "Mobile-first design approach",
+        "Fast-loading, conversion-optimized websites",
+        "SEO-ready, analytics installed",
+        "Landing, booking, or ecommerce",
+        "Mobile-first & scalable",
       ],
     },
     {
       icon: Megaphone,
       title: "Social Media Content Package",
-      description:
-        "Let AI power your social media presence with consistent, engaging content that drives real engagement and brand awareness.",
+      tagline: "Turn your content into cash flow.",
       features: [
-        "Monthly AI-assisted content calendar",
-        "12–20 ready-to-post designs per month",
-        "Captions, hashtags, and engagement analysis",
-        "Platform-optimized content for Instagram, LinkedIn, Facebook",
+        "AI-powered monthly content calendar",
+        "12–20 ready-to-post designs",
+        "Growth captions, hooks & analytics",
+        "Platform-optimized for Instagram & LinkedIn",
       ],
     },
     {
       icon: TrendingUp,
       title: "SEO & Marketing Campaigns",
-      description:
-        "Data-driven campaigns that deliver measurable results. We combine organic SEO with strategic paid advertising for maximum ROI.",
+      tagline: "Rank higher. Convert faster.",
       features: [
-        "Keyword research & comprehensive SEO audits",
-        "Google Ads, Facebook & Instagram campaigns",
-        "Conversion tracking and optimization",
-        "Weekly performance dashboards",
+        "Keyword research + ad strategy",
+        "Google & Meta campaign setup",
+        "CRO tracking & dashboards",
+        "Weekly ROI reports",
       ],
     },
     {
       icon: Bot,
       title: "AI Automations for Your Business",
-      description:
-        "Save time and reduce errors by automating repetitive processes. Our intelligent automation solutions work 24/7 to streamline your operations.",
+      tagline: "Work 30% less, grow 2× faster.",
       features: [
-        "Automate lead capture, customer onboarding, and reporting",
-        "Chatbot & email workflow automation",
-        "CRM, Google Workspace, and payment system integrations",
-        "Save 20–30 hours per month per team member",
+        "CRM, chatbot, and workflow automation",
+        "Lead capture & email sequences",
+        "Google Workspace + payment system integrations",
+        "Real-time business dashboards",
       ],
     },
   ];
@@ -59,54 +55,67 @@ const Services = () => {
     <div className="min-h-screen py-20">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
-          <p className="text-lg text-muted-foreground">
-            Comprehensive solutions designed to accelerate your business growth
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Services That{" "}
+            <span className="relative">
+              <span className="relative z-10">Actually Scale</span>
+              <span className="absolute bottom-2 left-0 w-full h-4 bg-primary/30 -rotate-1"></span>
+            </span>
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            We don't sell hours — we build ROI machines.
           </p>
-          <div className="h-1 w-20 bg-primary mx-auto mt-8"></div>
+          <div className="h-1 w-24 bg-foreground mx-auto mt-8"></div>
         </div>
 
-        {/* Services */}
-        <div className="space-y-12">
+        {/* Services Grid */}
+        <div className="space-y-8 max-w-6xl mx-auto mb-16">
           {services.map((service, index) => (
-            <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth">
+            <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth border-2">
               <CardHeader>
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="h-14 w-14 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <service.icon className="h-7 w-7 text-primary" />
+                <div className="flex items-start gap-6">
+                  <div className="h-16 w-16 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <service.icon className="h-8 w-8 text-foreground" />
                   </div>
-                  <div>
-                    <CardTitle className="text-2xl mb-2">{service.title}</CardTitle>
-                    <CardDescription className="text-base">{service.description}</CardDescription>
+                  <div className="flex-1">
+                    <CardTitle className="text-3xl mb-2">{service.title}</CardTitle>
+                    <p className="text-xl font-semibold text-foreground/80">{service.tagline}</p>
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ml-0 md:ml-22">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">{feature}</span>
-                    </li>
+                    <div key={featureIndex} className="flex items-start gap-3">
+                      <Check className="h-5 w-5 text-foreground flex-shrink-0 mt-0.5" />
+                      <p className="text-foreground/90">{feature}</p>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="mt-16 text-center">
-          <Card className="gradient-primary shadow-hover max-w-2xl mx-auto">
-            <CardContent className="p-8">
-              <h2 className="text-2xl font-bold mb-4">Ready to get started?</h2>
-              <p className="text-foreground/90 mb-6">
-                Let's discuss which services are right for your business
+        {/* CTA Section */}
+        <div className="max-w-4xl mx-auto">
+          <Card className="shadow-hover border-2">
+            <CardContent className="p-12 md:p-16 text-center">
+              <h2 className="text-4xl font-bold mb-6">
+                Don't overthink. Pick a plan.
+              </h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                We'll make sure it pays for itself.
               </p>
-              <Button size="lg" variant="outline" asChild>
-                <Link to="/contact">Schedule a Consultation</Link>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" asChild>
+                  <Link to="/pricing">View Pricing</Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <Link to="/contact">Book Free Audit</Link>
+                </Button>
+              </div>
             </CardContent>
           </Card>
         </div>
