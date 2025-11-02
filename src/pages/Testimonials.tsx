@@ -44,13 +44,13 @@ const Testimonials = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-24 md:py-40 bg-gradient-subtle">
+      <section className="py-24 md:py-40 bg-[#F8F8F8]">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-poppins text-5xl md:text-7xl font-semibold mb-6 tracking-tight">
-              Client <span className="text-primary">Testimonials</span>
+          <div className="max-w-4xl mx-auto text-center animate-fade-up">
+            <h1 className="font-poppins text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-[#111111]">
+              Client <span className="text-[#FFD84D]">Testimonials</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground font-light">
+            <p className="text-xl md:text-2xl text-[#111111]/80 font-light">
               Trusted by businesses across North America and Europe
             </p>
           </div>
@@ -58,22 +58,22 @@ const Testimonials = () => {
       </section>
 
       {/* Testimonials Grid */}
-      <section className="py-20">
+      <section className="py-20 bg-[#F8F8F8]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth">
+              <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth bg-white border-none animate-fade-up">
                 <CardContent className="p-6">
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                      <Star key={i} className="h-4 w-4 fill-[#FFD84D] text-[#FFD84D]" />
                     ))}
                   </div>
-                  <p className="text-foreground mb-6 leading-relaxed">"{testimonial.quote}"</p>
-                  <div className="border-t border-border pt-4">
-                    <p className="font-semibold text-foreground">{testimonial.author}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                  <p className="text-[#111111] mb-6 leading-relaxed">"{testimonial.quote}"</p>
+                  <div className="border-t border-[#111111]/10 pt-4">
+                    <p className="font-semibold text-[#111111]">{testimonial.author}</p>
+                    <p className="text-sm text-[#111111]/70">{testimonial.role}</p>
+                    <p className="text-sm text-[#111111]/70">{testimonial.location}</p>
                   </div>
                 </CardContent>
               </Card>

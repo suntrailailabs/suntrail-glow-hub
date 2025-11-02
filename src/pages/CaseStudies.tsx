@@ -81,13 +81,13 @@ const CaseStudies = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-24 md:py-40 bg-gradient-subtle">
+      <section className="py-24 md:py-40 bg-[#111111]">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-poppins text-5xl md:text-7xl font-semibold mb-6 tracking-tight">
-              Client <span className="text-primary">Success Stories</span>
+          <div className="max-w-4xl mx-auto text-center animate-fade-up">
+            <h1 className="font-poppins text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-white">
+              Client <span className="text-[#FFD84D]">Success Stories</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground font-light">
+            <p className="text-xl md:text-2xl text-[#D1D1D1] font-light">
               Measurable results from businesses we've helped transform
             </p>
           </div>
@@ -95,45 +95,45 @@ const CaseStudies = () => {
       </section>
 
       {/* Case Studies */}
-      <section className="py-20">
+      <section className="py-20 bg-[#111111]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="space-y-8 max-w-5xl mx-auto">
             {caseStudies.map((study, index) => (
-              <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth">
+              <Card key={index} className="shadow-soft hover:shadow-glow transition-smooth bg-white/5 border-white/10 hover:bg-white/10 animate-fade-up">
                 <CardHeader>
                   <div className="flex flex-wrap items-center gap-2 mb-4">
-                    <Badge variant="secondary">{study.industry}</Badge>
-                    <Badge variant="outline">{study.location}</Badge>
+                    <Badge variant="secondary" className="bg-[#FFD84D]/20 text-[#FFD84D] border-none">{study.industry}</Badge>
+                    <Badge variant="outline" className="border-[#D1D1D1]/30 text-[#D1D1D1]">{study.location}</Badge>
                   </div>
-                  <CardTitle className="font-poppins text-2xl mb-2">{study.client}</CardTitle>
+                  <CardTitle className="font-poppins text-2xl mb-2 text-white">{study.client}</CardTitle>
                   <div className="space-y-4 mt-4">
                     <div>
-                      <h3 className="font-semibold text-sm text-muted-foreground uppercase mb-2">
+                      <h3 className="font-semibold text-sm text-[#FFD84D] uppercase mb-2">
                         Challenge
                       </h3>
-                      <CardDescription className="text-base">{study.challenge}</CardDescription>
+                      <CardDescription className="text-base text-[#D1D1D1]">{study.challenge}</CardDescription>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-sm text-muted-foreground uppercase mb-2">
+                      <h3 className="font-semibold text-sm text-[#FFD84D] uppercase mb-2">
                         Solution
                       </h3>
-                      <CardDescription className="text-base">{study.solution}</CardDescription>
+                      <CardDescription className="text-base text-[#D1D1D1]">{study.solution}</CardDescription>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <h3 className="font-semibold text-sm text-muted-foreground uppercase mb-4">
+                  <h3 className="font-semibold text-sm text-[#FFD84D] uppercase mb-4">
                     Results
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {study.results.map((result, resultIndex) => (
                       <div
                         key={resultIndex}
-                        className="flex flex-col items-center text-center p-4 rounded-lg bg-secondary/30"
+                        className="flex flex-col items-center text-center p-4 rounded-lg bg-white/5 border border-white/10"
                       >
-                        <result.icon className="h-8 w-8 text-primary mb-3" />
-                        <p className="text-2xl font-bold mb-1">{result.value}</p>
-                        <p className="text-sm text-muted-foreground">{result.label}</p>
+                        <result.icon className="h-8 w-8 text-[#FFD84D] mb-3" />
+                        <p className="text-2xl font-bold mb-1 text-[#FFD84D]">{result.value}</p>
+                        <p className="text-sm text-[#D1D1D1]">{result.label}</p>
                       </div>
                     ))}
                   </div>

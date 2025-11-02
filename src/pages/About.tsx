@@ -86,24 +86,24 @@ const About = () => {
       </section>
 
       {/* Core Approach */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 bg-[#F8F8F8]">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="font-poppins text-4xl md:text-5xl font-semibold mb-4 text-center">Our Approach</h2>
-            <p className="text-xl text-muted-foreground text-center mb-12 max-w-3xl mx-auto">
+          <div className="max-w-5xl mx-auto animate-fade-up">
+            <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-4 text-center text-[#111111]">Our Approach</h2>
+            <p className="text-xl text-[#111111]/70 text-center mb-12 max-w-3xl mx-auto">
               Our core principles guide every project and client relationship
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {beliefs.map((belief, index) => (
-                <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth p-6">
+                <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth p-6 bg-white border-none">
                   <CardContent className="p-0">
                     <div className="flex items-start gap-4">
-                      <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <belief.icon className="h-6 w-6 text-primary" />
+                      <div className="h-12 w-12 rounded-lg bg-[#FFD84D]/20 flex items-center justify-center flex-shrink-0">
+                        <belief.icon className="h-6 w-6 text-[#FFD84D]" />
                       </div>
                       <div>
-                        <h3 className="font-poppins text-xl font-semibold mb-2">{belief.title}</h3>
-                        <p className="text-muted-foreground">{belief.description}</p>
+                        <h3 className="font-poppins text-xl font-semibold mb-2 text-[#111111]">{belief.title}</h3>
+                        <p className="text-[#111111]/70">{belief.description}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -115,12 +115,12 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
-          <Card className="max-w-4xl mx-auto shadow-hover bg-gradient-subtle">
+          <Card className="max-w-4xl mx-auto shadow-hover bg-[#F8F8F8] border-none animate-fade-up">
             <CardContent className="p-12 md:p-16 text-center">
-              <h2 className="font-poppins text-4xl md:text-5xl font-semibold mb-6">Ready to Partner With Us?</h2>
-              <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+              <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-6 text-[#111111]">Ready to Partner With Us?</h2>
+              <p className="text-xl text-[#111111]/70 mb-10 max-w-2xl mx-auto">
                 Discover how Suntrail AI Labs can help modernize your operations and drive measurable growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

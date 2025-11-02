@@ -81,25 +81,22 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-40 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img src={heroImage} alt="AI Network Visualization" className="w-full h-full object-cover opacity-10" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background"></div>
-        </div>
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-poppins text-5xl md:text-7xl font-semibold mb-6 leading-tight tracking-tight">
+      <section className="relative py-24 md:py-40 overflow-hidden bg-black">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center animate-fade-up">
+            <h1 className="font-poppins text-5xl md:text-7xl font-extrabold mb-4 leading-tight tracking-tight text-white">
               Transform Your Business with{" "}
-              <span className="text-primary">Intelligent Automation</span>
+              <span className="text-[#FFD84D]">Intelligent Automation</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto font-light">
+            <div className="w-32 h-1 bg-[#FFD84D] mx-auto mb-8"></div>
+            <p className="text-xl md:text-2xl text-[#D1D1D1] mb-10 max-w-3xl mx-auto font-light">
               We build secure, scalable, and AI-powered systems that make your business run itself.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild className="text-base">
+              <Button size="lg" asChild variant="yellow">
                 <Link to="/services">Explore Solutions</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="text-base">
+              <Button size="lg" variant="outline" asChild className="border-white text-white hover:bg-white hover:text-black">
                 <Link to="/contact">Book Free Consultation</Link>
               </Button>
             </div>
@@ -108,21 +105,21 @@ const Home = () => {
       </section>
 
       {/* About Us Section */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 bg-[#F8F8F8]">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="font-poppins text-4xl md:text-5xl font-semibold mb-6">Who We Are</h2>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+          <div className="max-w-4xl mx-auto text-center mb-12 animate-fade-up">
+            <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-6 text-[#111111]">Who We Are</h2>
+            <p className="text-lg md:text-xl text-[#111111]/80 leading-relaxed">
               Suntrail AI Labs Inc. is a Canada-based IT consulting firm helping North American and global companies harness the power of automation and AI. We specialize in cloud infrastructure, workflow automation, and AI-driven analytics.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {metrics.map((metric, index) => (
-              <div key={index} className="flex flex-col items-center text-center gap-4 p-6 bg-card rounded-lg border border-border">
-                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <metric.icon className="h-6 w-6 text-primary" />
+              <div key={index} className="flex flex-col items-center text-center gap-4 p-6 bg-white rounded-lg shadow-soft hover:shadow-hover transition-smooth animate-fade-up">
+                <div className="h-12 w-12 rounded-full bg-[#FFD84D]/20 flex items-center justify-center flex-shrink-0">
+                  <metric.icon className="h-6 w-6 text-[#FFD84D]" />
                 </div>
-                <p className="text-foreground font-medium">{metric.text}</p>
+                <p className="text-[#111111] font-medium">{metric.text}</p>
               </div>
             ))}
           </div>
@@ -130,27 +127,27 @@ const Home = () => {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-poppins text-4xl md:text-5xl font-semibold mb-4">Our Services</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-16 animate-fade-up">
+            <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-4 text-[#111111]">Our Services</h2>
+            <p className="text-xl text-[#111111]/70 max-w-2xl mx-auto">
               Comprehensive solutions to modernize your business operations
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
             {services.map((service, index) => (
-              <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth overflow-hidden group">
+              <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth overflow-hidden group animate-fade-up border-none">
                 <div className="h-48 overflow-hidden">
                   <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-smooth" />
                 </div>
                 <CardHeader className="p-6">
-                  <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <service.icon className="h-6 w-6 text-primary" />
+                  <div className="h-12 w-12 rounded-lg bg-[#FFD84D]/20 flex items-center justify-center mb-4">
+                    <service.icon className="h-6 w-6 text-[#FFD84D]" />
                   </div>
-                  <CardTitle className="font-poppins text-xl mb-2">{service.title}</CardTitle>
-                  <CardDescription className="text-base text-muted-foreground">{service.description}</CardDescription>
+                  <CardTitle className="font-poppins text-xl mb-2 text-[#111111]">{service.title}</CardTitle>
+                  <CardDescription className="text-base text-[#111111]/70">{service.description}</CardDescription>
                 </CardHeader>
               </Card>
             ))}
@@ -165,28 +162,28 @@ const Home = () => {
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 bg-[#111111]">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-poppins text-4xl md:text-5xl font-semibold mb-4">Client Success Stories</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-16 animate-fade-up">
+            <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-4 text-white">Client Success Stories</h2>
+            <p className="text-xl text-[#D1D1D1] max-w-2xl mx-auto">
               Measurable results for businesses around the world
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {caseStudies.map((study, index) => (
-              <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth p-6">
+              <Card key={index} className="shadow-soft hover:shadow-glow transition-smooth p-6 bg-white/5 border-white/10 hover:bg-white/10 animate-fade-up">
                 <CardContent className="p-0">
-                  <h3 className="font-poppins text-lg font-semibold mb-3 text-foreground">{study.client}</h3>
-                  <p className="text-muted-foreground">{study.result}</p>
+                  <h3 className="font-poppins text-lg font-semibold mb-3 text-[#FFD84D]">{study.client}</h3>
+                  <p className="text-[#D1D1D1]">{study.result}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="yellow" size="lg" asChild>
               <Link to="/case-studies">View All Case Studies</Link>
             </Button>
           </div>
@@ -194,21 +191,19 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20 bg-[#FFD84D]">
         <div className="container mx-auto px-4 lg:px-8">
-          <Card className="max-w-4xl mx-auto shadow-hover bg-gradient-subtle">
-            <CardContent className="p-12 md:p-16 text-center">
-              <h2 className="font-poppins text-4xl md:text-5xl font-semibold mb-6">
-                Let's Build Something Intelligent
-              </h2>
-              <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-                Schedule a consultation and discover how we can transform your operations with AI and automation.
-              </p>
-              <Button size="lg" asChild className="text-base">
-                <Link to="/contact">Book Free Consultation</Link>
-              </Button>
-            </CardContent>
-          </Card>
+          <div className="max-w-4xl mx-auto text-center animate-fade-up">
+            <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-6 text-[#111111]">
+              Book Your Free Audit
+            </h2>
+            <p className="text-xl text-[#111111]/80 mb-10 max-w-2xl mx-auto">
+              Schedule a consultation and discover how we can transform your operations with AI and automation.
+            </p>
+            <Button size="lg" asChild className="bg-[#111111] text-white hover:bg-black shadow-hover">
+              <Link to="/contact">Book Free Consultation</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </div>

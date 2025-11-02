@@ -30,13 +30,14 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-24 md:py-40 bg-gradient-subtle">
+      <section className="py-24 md:py-40 bg-black">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-poppins text-5xl md:text-7xl font-semibold mb-6 tracking-tight">
-              Let's Build Something <span className="text-primary">Intelligent</span>
+          <div className="max-w-4xl mx-auto text-center animate-fade-up">
+            <h1 className="font-poppins text-5xl md:text-7xl font-extrabold mb-4 tracking-tight text-white">
+              Let's Build Something <span className="text-[#FFD84D]">Intelligent</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground font-light">
+            <div className="w-32 h-1 bg-[#FFD84D] mx-auto mb-8"></div>
+            <p className="text-xl md:text-2xl text-[#D1D1D1] font-light">
               Schedule a consultation to discuss your project and technology needs
             </p>
           </div>
@@ -44,37 +45,37 @@ const Contact = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <Card className="shadow-soft">
+              <Card className="shadow-soft bg-white/5 border-white/10">
                 <CardHeader>
-                  <CardTitle className="font-poppins text-3xl">Get in Touch</CardTitle>
+                  <CardTitle className="font-poppins text-3xl text-white">Get in Touch</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="name">Name *</Label>
-                        <Input id="name" name="name" required placeholder="Your name" />
+                        <Label htmlFor="name" className="text-white">Name *</Label>
+                        <Input id="name" name="name" required placeholder="Your name" className="bg-white text-[#111111]" />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="email">Email *</Label>
-                        <Input id="email" name="email" type="email" required placeholder="you@company.com" />
+                        <Label htmlFor="email" className="text-white">Email *</Label>
+                        <Input id="email" name="email" type="email" required placeholder="you@company.com" className="bg-white text-[#111111]" />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="company">Company</Label>
-                      <Input id="company" name="company" placeholder="Your company name" />
+                      <Label htmlFor="company" className="text-white">Company</Label>
+                      <Input id="company" name="company" placeholder="Your company name" className="bg-white text-[#111111]" />
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="service">Service Interest *</Label>
+                      <Label htmlFor="service" className="text-white">Service Interest *</Label>
                       <Select name="service" required>
-                        <SelectTrigger>
+                        <SelectTrigger className="bg-white text-[#111111]">
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
                         <SelectContent>
@@ -88,9 +89,9 @@ const Contact = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="budget">Budget Range</Label>
+                      <Label htmlFor="budget" className="text-white">Budget Range</Label>
                       <Select name="budget">
-                        <SelectTrigger>
+                        <SelectTrigger className="bg-white text-[#111111]">
                           <SelectValue placeholder="Select budget range" />
                         </SelectTrigger>
                         <SelectContent>
@@ -103,17 +104,18 @@ const Contact = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message">Message *</Label>
+                      <Label htmlFor="message" className="text-white">Message *</Label>
                       <Textarea
                         id="message"
                         name="message"
                         required
                         placeholder="Tell us about your project and goals..."
                         rows={6}
+                        className="bg-white text-[#111111]"
                       />
                     </div>
 
-                    <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                    <Button type="submit" size="lg" className="w-full bg-[#FFD84D] text-[#111111] hover:bg-[#FFD84D]/90" disabled={isSubmitting}>
                       {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
                   </form>
@@ -123,29 +125,29 @@ const Contact = () => {
 
             {/* Contact Info */}
             <div className="space-y-6">
-              <Card className="shadow-soft">
+              <Card className="shadow-soft bg-white/5 border-white/10">
                 <CardContent className="p-6 space-y-6">
                   <div className="flex items-start gap-4">
-                    <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="h-6 w-6 text-primary" />
+                    <div className="h-12 w-12 rounded-lg bg-[#FFD84D]/20 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="h-6 w-6 text-[#FFD84D]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Location</h3>
-                      <p className="text-sm text-muted-foreground">
+                      <h3 className="font-semibold mb-1 text-white">Location</h3>
+                      <p className="text-sm text-[#D1D1D1]">
                         Mississauga, ON, Canada
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Mail className="h-6 w-6 text-primary" />
+                    <div className="h-12 w-12 rounded-lg bg-[#FFD84D]/20 flex items-center justify-center flex-shrink-0">
+                      <Mail className="h-6 w-6 text-[#FFD84D]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Email</h3>
+                      <h3 className="font-semibold mb-1 text-white">Email</h3>
                       <a
                         href="mailto:info@suntrailailabs.com"
-                        className="text-sm text-muted-foreground hover:text-foreground transition-smooth"
+                        className="text-sm text-[#D1D1D1] hover:text-[#FFD84D] transition-smooth"
                       >
                         info@suntrailailabs.com
                       </a>
@@ -153,12 +155,12 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Clock className="h-6 w-6 text-primary" />
+                    <div className="h-12 w-12 rounded-lg bg-[#FFD84D]/20 flex items-center justify-center flex-shrink-0">
+                      <Clock className="h-6 w-6 text-[#FFD84D]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Response Time</h3>
-                      <p className="text-sm text-muted-foreground">
+                      <h3 className="font-semibold mb-1 text-white">Response Time</h3>
+                      <p className="text-sm text-[#D1D1D1]">
                         Within 24 hours
                       </p>
                     </div>
