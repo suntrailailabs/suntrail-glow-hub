@@ -27,7 +27,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-smooth">
             <img src={logo} alt="Suntrail AI Labs" className="h-10 w-10" />
-            <span className="font-bold text-lg">Suntrail AI Labs</span>
+            <span className="font-heading font-semibold text-lg">Suntrail AI Labs</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
               <img src={logo} alt="Suntrail AI Labs" className="h-10 w-10" />
-              <span className="font-bold text-lg">Suntrail AI Labs</span>
+              <span className="font-heading font-semibold text-lg">Suntrail AI Labs</span>
             </Link>
             <p className="text-muted-foreground text-sm">Empowering businesses with intelligent design & automation.</p>
           </div>

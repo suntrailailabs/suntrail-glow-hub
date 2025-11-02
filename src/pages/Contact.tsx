@@ -33,7 +33,7 @@ const Contact = () => {
       <section className="py-24 md:py-40 bg-black">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
-            <h1 className="font-poppins text-5xl md:text-7xl font-extrabold mb-4 tracking-tight text-white">
+            <h1 className="font-heading text-5xl md:text-7xl font-semibold mb-4 text-white">
               Let's Build Something <span className="text-[#FFD84D]">Intelligent</span>
             </h1>
             <div className="w-32 h-1 bg-[#FFD84D] mx-auto mb-8"></div>
@@ -52,7 +52,7 @@ const Contact = () => {
             <div className="lg:col-span-2">
               <Card className="shadow-soft bg-white border-[#E5E5E5]">
                 <CardHeader>
-                  <CardTitle className="font-poppins text-3xl text-[#111111]">Get in Touch</CardTitle>
+                  <CardTitle className="font-heading text-3xl font-semibold text-[#111111]">Get in Touch</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">

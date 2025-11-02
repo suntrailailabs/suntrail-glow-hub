@@ -84,7 +84,7 @@ const Home = () => {
       <section className="relative py-24 md:py-40 overflow-hidden bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
-            <h1 className="font-poppins text-5xl md:text-7xl font-extrabold mb-4 leading-tight tracking-tight text-[#111111]">
+            <h1 className="font-heading text-5xl md:text-7xl font-semibold mb-4 leading-tight text-[#111111]">
               Transform Your Business with{" "}
               <span className="text-[#FFD84D]">Intelligent Automation</span>
             </h1>
@@ -108,7 +108,7 @@ const Home = () => {
       <section className="py-20 bg-[#111111]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-12 animate-fade-up">
-            <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-6 text-white">Who We Are</h2>
+            <h2 className="font-heading text-4xl md:text-5xl font-semibold mb-6 text-white">Who We Are</h2>
             <p className="text-lg md:text-xl text-[#D1D1D1] leading-relaxed">
               Suntrail AI Labs Inc. is a Canada-based IT consulting firm helping North American and global companies harness the power of automation and AI. We specialize in cloud infrastructure, workflow automation, and AI-driven analytics.
             </p>
@@ -130,7 +130,7 @@ const Home = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16 animate-fade-up">
-            <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-4 text-[#111111]">Our Services</h2>
+            <h2 className="font-heading text-4xl md:text-5xl font-semibold mb-4 text-[#111111]">Our Services</h2>
             <p className="text-xl text-[#5B5B5B] max-w-2xl mx-auto">
               Comprehensive solutions to modernize your business operations
             </p>
@@ -146,7 +146,7 @@ const Home = () => {
                   <div className="h-12 w-12 rounded-lg bg-[#FFD84D]/10 flex items-center justify-center mb-4">
                     <service.icon className="h-6 w-6 text-[#FFD84D]" />
                   </div>
-                  <CardTitle className="font-poppins text-xl mb-2 text-[#111111]">{service.title}</CardTitle>
+                  <CardTitle className="font-heading text-xl font-semibold mb-2 text-[#111111]">{service.title}</CardTitle>
                   <CardDescription className="text-base text-[#5B5B5B]">{service.description}</CardDescription>
                 </CardHeader>
               </Card>
@@ -165,7 +165,7 @@ const Home = () => {
       <section className="py-20 bg-[#111111]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16 animate-fade-up">
-            <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-4 text-white">Client Success Stories</h2>
+            <h2 className="font-heading text-4xl md:text-5xl font-semibold mb-4 text-white">Client Success Stories</h2>
             <p className="text-xl text-[#D1D1D1] max-w-2xl mx-auto">
               Measurable results for businesses around the world
             </p>
@@ -175,7 +175,7 @@ const Home = () => {
             {caseStudies.map((study, index) => (
               <Card key={index} className="shadow-soft hover:shadow-glow transition-smooth p-6 bg-white/5 border-white/10 hover:bg-white/10 animate-fade-up">
                 <CardContent className="p-0">
-                  <h3 className="font-poppins text-lg font-semibold mb-3 text-[#FFD84D]">{study.client}</h3>
+                  <h3 className="font-heading text-lg font-semibold mb-3 text-[#FFD84D]">{study.client}</h3>
                   <p className="text-[#D1D1D1]">{study.result}</p>
                 </CardContent>
               </Card>
@@ -194,7 +194,7 @@ const Home = () => {
       <section className="py-20 bg-[#F5F5F5]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
-            <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-6 text-[#111111]">
+            <h2 className="font-heading text-4xl md:text-5xl font-semibold mb-6 text-[#111111]">
               Book Your Free Audit
             </h2>
             <p className="text-xl text-[#5B5B5B] mb-10 max-w-2xl mx-auto">
