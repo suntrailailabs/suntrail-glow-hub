@@ -66,13 +66,13 @@ const Services = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-24 md:py-40 bg-white">
+      <section className="py-24 md:py-40 bg-black">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
-            <h1 className="font-poppins text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-[#111111]">
+            <h1 className="font-poppins text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-white">
               Our <span className="text-[#FFD84D]">Solutions</span>
             </h1>
-            <p className="text-xl md:text-2xl text-[#5B5B5B] font-light">
+            <p className="text-xl md:text-2xl text-[#E5E5E5] font-light">
               Comprehensive technology services designed to modernize operations and accelerate growth.
             </p>
           </div>
