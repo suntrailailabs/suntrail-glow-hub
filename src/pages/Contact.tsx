@@ -66,7 +66,7 @@ const Contact = () => {
                           name="name"
                           required
                           placeholder="Your name"
-                          className="bg-white text-[#111111]"
+                          className="bg-black text-[#111111]"
                         />
                       </div>
                       <div className="space-y-2">
@@ -79,7 +79,7 @@ const Contact = () => {
                           type="email"
                           required
                           placeholder="you@company.com"
-                          className="bg-white text-[#111111]"
+                          className="bg-black text-[#111111]"
                         />
                       </div>
                     </div>
