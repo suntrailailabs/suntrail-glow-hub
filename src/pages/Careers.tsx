@@ -72,14 +72,13 @@ const Careers = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-24 md:py-40 bg-white">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center animate-fade-up">
-            <h1 className="font-heading text-5xl md:text-7xl font-semibold mb-4 text-[#111111]">
-              Join the Future of <span className="text-[#FFD84D]">Intelligent Automation</span>
+      <section className="py-32 md:py-48 bg-background">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="max-w-5xl mx-auto text-center animate-fade-up">
+            <h1 className="font-heading text-5xl md:text-7xl font-semibold mb-8 text-foreground">
+              Join Our <span className="text-primary">Team</span>
             </h1>
-            <div className="w-32 h-1 bg-[#FFD84D] mx-auto mb-8"></div>
-            <p className="text-xl md:text-2xl text-[#5B5B5B] font-light">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               Build cutting-edge solutions with a team of innovators and problem solvers
             </p>
           </div>
@@ -87,17 +86,17 @@ const Careers = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-[#111111]">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="py-32 bg-secondary">
+        <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto animate-fade-up">
-            <h2 className="font-heading text-4xl font-semibold text-center mb-12 text-white">Our Values</h2>
-            <Card className="shadow-soft bg-white/10 border-white/10">
-              <CardContent className="p-8">
+            <h2 className="font-heading text-4xl font-semibold text-center mb-16 text-foreground">Our Values</h2>
+            <Card className="shadow-card bg-background">
+              <CardContent className="p-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {values.map((value, index) => (
-                    <div key={index} className="flex items-center gap-3 p-4 bg-white/5 rounded-lg">
-                      <div className="h-2 w-2 bg-[#FFD84D] rounded-full flex-shrink-0"></div>
-                      <p className="text-lg font-medium text-white">{value}</p>
+                    <div key={index} className="flex items-center gap-4 p-6 bg-secondary rounded-sm">
+                      <div className="h-2 w-2 bg-primary rounded-full flex-shrink-0"></div>
+                      <p className="text-base font-medium text-foreground">{value}</p>
                     </div>
                   ))}
                 </div>
@@ -108,31 +107,31 @@ const Careers = () => {
       </section>
 
       {/* Open Positions */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="mb-16 text-center animate-fade-up">
-            <h2 className="font-heading text-4xl font-semibold mb-4 text-[#111111]">Open Positions</h2>
-            <p className="text-xl text-[#5B5B5B]">Join our growing team</p>
+      <section className="py-32 bg-background">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="mb-20 text-center animate-fade-up">
+            <h2 className="font-heading text-4xl font-semibold mb-6 text-foreground">Open Positions</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">Join our growing team</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {positions.map((position, index) => (
-              <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth bg-[#F5F5F5] border-none animate-fade-up">
+              <Card key={index} className="shadow-card hover:shadow-hover transition-smooth bg-card animate-fade-up">
                 <CardHeader>
-                  <div className="h-12 w-12 rounded-lg bg-[#FFD84D]/10 flex items-center justify-center mb-4">
-                    <position.icon className="h-6 w-6 text-[#FFD84D]" />
+                  <div className="h-12 w-12 rounded-sm bg-primary/10 flex items-center justify-center mb-6">
+                    <position.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <CardTitle className="font-heading text-2xl font-semibold mb-2 text-[#111111]">{position.title}</CardTitle>
-                  <CardDescription className="text-sm font-semibold text-[#5B5B5B] mb-4">
+                  <CardTitle className="font-heading text-2xl font-semibold mb-3 text-foreground">{position.title}</CardTitle>
+                  <CardDescription className="text-sm font-medium text-muted-foreground mb-6 uppercase tracking-wide">
                     {position.location}
                   </CardDescription>
-                  <p className="text-[#111111]">{position.description}</p>
+                  <p className="text-foreground leading-relaxed">{position.description}</p>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-2 mb-6">
+                  <div className="space-y-3 mb-8">
                     {position.requirements.map((req, reqIndex) => (
-                      <div key={reqIndex} className="flex items-start gap-2">
-                        <div className="h-1.5 w-1.5 bg-[#FFD84D] rounded-full flex-shrink-0 mt-2"></div>
-                        <p className="text-sm text-[#5B5B5B]">{req}</p>
+                      <div key={reqIndex} className="flex items-start gap-3">
+                        <div className="h-1.5 w-1.5 bg-primary rounded-full flex-shrink-0 mt-2"></div>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{req}</p>
                       </div>
                     ))}
                   </div>
@@ -147,13 +146,13 @@ const Careers = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#111111]">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="py-32 bg-secondary">
+        <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
-            <h2 className="font-heading text-4xl md:text-5xl font-semibold mb-6 text-white">
+            <h2 className="font-heading text-4xl md:text-5xl font-semibold mb-8 text-foreground">
               Ready to Make an Impact?
             </h2>
-            <p className="text-xl text-[#D1D1D1] mb-10 max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
               Submit your application and join our mission to transform businesses through intelligent technology.
             </p>
             <Button size="lg" asChild>

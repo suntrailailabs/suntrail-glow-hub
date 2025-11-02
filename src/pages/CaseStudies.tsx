@@ -81,13 +81,13 @@ const CaseStudies = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-24 md:py-40 bg-[#111111]">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center animate-fade-up">
-            <h1 className="font-heading text-5xl md:text-7xl font-semibold mb-6 text-white">
-              Client <span className="text-[#FFD84D]">Success Stories</span>
+      <section className="py-32 md:py-48 bg-background">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="max-w-5xl mx-auto text-center animate-fade-up">
+            <h1 className="font-heading text-5xl md:text-7xl font-semibold mb-8 text-foreground">
+              Client <span className="text-primary">Insights</span>
             </h1>
-            <p className="text-xl md:text-2xl text-[#D1D1D1] font-light">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               Measurable results from businesses we've helped transform
             </p>
           </div>
@@ -95,45 +95,45 @@ const CaseStudies = () => {
       </section>
 
       {/* Case Studies */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="space-y-8 max-w-5xl mx-auto">
+      <section className="py-32 bg-secondary">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="space-y-10 max-w-5xl mx-auto">
             {caseStudies.map((study, index) => (
-              <Card key={index} className="shadow-soft hover:shadow-glow transition-smooth bg-white border-[#111111]/10 hover:border-[#FFD84D] animate-fade-up">
+              <Card key={index} className="shadow-card hover:shadow-hover transition-smooth bg-background animate-fade-up">
                 <CardHeader>
                   <div className="flex flex-wrap items-center gap-2 mb-4">
-                    <Badge variant="secondary" className="bg-[#FFD84D]/20 text-[#111111] border-none">{study.industry}</Badge>
-                    <Badge variant="outline" className="border-[#111111]/30 text-[#111111]">{study.location}</Badge>
+                    <Badge variant="secondary" className="bg-primary/10 text-foreground border-none font-medium">{study.industry}</Badge>
+                    <Badge variant="outline" className="border-border text-muted-foreground">{study.location}</Badge>
                   </div>
-                  <CardTitle className="font-heading text-2xl font-semibold mb-2 text-[#111111]">{study.client}</CardTitle>
-                  <div className="space-y-4 mt-4">
+                  <CardTitle className="font-heading text-2xl font-semibold mb-4 text-foreground">{study.client}</CardTitle>
+                  <div className="space-y-6 mt-6">
                     <div>
-                      <h3 className="font-semibold text-sm text-[#FFD84D] uppercase mb-2">
+                      <h3 className="font-semibold text-xs text-primary uppercase tracking-wide mb-3">
                         Challenge
                       </h3>
-                      <CardDescription className="text-base text-[#5B5B5B]">{study.challenge}</CardDescription>
+                      <CardDescription className="text-base text-muted-foreground leading-relaxed">{study.challenge}</CardDescription>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-sm text-[#FFD84D] uppercase mb-2">
+                      <h3 className="font-semibold text-xs text-primary uppercase tracking-wide mb-3">
                         Solution
                       </h3>
-                      <CardDescription className="text-base text-[#5B5B5B]">{study.solution}</CardDescription>
+                      <CardDescription className="text-base text-muted-foreground leading-relaxed">{study.solution}</CardDescription>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <h3 className="font-semibold text-sm text-[#FFD84D] uppercase mb-4">
+                  <h3 className="font-semibold text-xs text-primary uppercase tracking-wide mb-6">
                     Results
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {study.results.map((result, resultIndex) => (
                       <div
                         key={resultIndex}
-                        className="flex flex-col items-center text-center p-4 rounded-lg bg-[#F5F5F5] border border-[#111111]/10"
+                        className="flex flex-col items-center text-center p-6 rounded-sm bg-secondary border border-border"
                       >
-                        <result.icon className="h-8 w-8 text-[#FFD84D] mb-3" />
-                        <p className="text-2xl font-bold mb-1 text-[#111111]">{result.value}</p>
-                        <p className="text-sm text-[#5B5B5B]">{result.label}</p>
+                        <result.icon className="h-8 w-8 text-primary mb-4" />
+                        <p className="text-2xl font-semibold mb-2 text-foreground">{result.value}</p>
+                        <p className="text-sm text-muted-foreground">{result.label}</p>
                       </div>
                     ))}
                   </div>

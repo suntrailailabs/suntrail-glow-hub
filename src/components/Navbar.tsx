@@ -9,21 +9,21 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", path: "/" },
+    { name: "Overview", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "Case Studies", path: "/case-studies" },
-    { name: "Testimonials", path: "/testimonials" },
-    { name: "Careers", path: "/careers" },
-    { name: "Contact", path: "/contact" },
+    { name: "Consulting Services", path: "/services" },
+    { name: "Insights", path: "/case-studies" },
+    { name: "Client Success", path: "/testimonials" },
+    { name: "Join Our Team", path: "/careers" },
+    { name: "Connect", path: "/contact" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="flex items-center justify-between h-14">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-smooth">
             <img src={logo} alt="Suntrail AI Labs" className="h-10 w-10" />
@@ -31,20 +31,20 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-smooth hover:text-primary ${
-                  isActive(link.path) ? "text-primary" : "text-foreground"
+                className={`text-xs font-medium uppercase tracking-wide transition-smooth ${
+                  isActive(link.path) ? "text-foreground" : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {link.name}
               </Link>
             ))}
             <Button size="sm" asChild>
-              <Link to="/contact">Book Free Audit</Link>
+              <Link to="/contact">Get Started</Link>
             </Button>
           </div>
 

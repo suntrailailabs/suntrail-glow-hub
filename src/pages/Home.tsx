@@ -81,23 +81,22 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-40 overflow-hidden bg-white">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center animate-fade-up">
-            <h1 className="font-heading text-5xl md:text-7xl font-semibold mb-4 leading-tight text-[#111111]">
+      <section className="relative py-32 md:py-48 overflow-hidden bg-white">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="max-w-5xl mx-auto text-center animate-fade-up">
+            <h1 className="font-heading text-5xl md:text-7xl font-semibold mb-6 leading-tight text-foreground">
               Transform Your Business with{" "}
-              <span className="text-[#FFD84D]">Intelligent Automation</span>
+              <span className="text-primary">Intelligent Automation</span>
             </h1>
-            <div className="w-32 h-1 bg-[#FFD84D] mx-auto mb-8"></div>
-            <p className="text-xl md:text-2xl text-[#5B5B5B] mb-10 max-w-3xl mx-auto font-light">
+            <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
               We build secure, scalable, and AI-powered systems that make your business run itself.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild variant="yellow">
+              <Button size="lg" asChild>
                 <Link to="/services">Explore Solutions</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link to="/contact">Book Free Consultation</Link>
+                <Link to="/contact">Book Consultation</Link>
               </Button>
             </div>
           </div>
@@ -105,21 +104,21 @@ const Home = () => {
       </section>
 
       {/* About Us Section */}
-      <section className="py-20 bg-[#111111]">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center mb-12 animate-fade-up">
-            <h2 className="font-heading text-4xl md:text-5xl font-semibold mb-6 text-white">Who We Are</h2>
-            <p className="text-lg md:text-xl text-[#D1D1D1] leading-relaxed">
+      <section className="py-32 bg-secondary">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-up">
+            <h2 className="font-heading text-4xl md:text-5xl font-semibold mb-8 text-foreground">Who We Are</h2>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               Suntrail AI Labs Inc. is a Canada-based IT consulting firm helping North American and global companies harness the power of automation and AI. We specialize in cloud infrastructure, workflow automation, and AI-driven analytics.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {metrics.map((metric, index) => (
-              <div key={index} className="flex flex-col items-center text-center gap-4 p-6 bg-white/10 rounded-lg border border-white/10 shadow-soft hover:shadow-glow transition-smooth animate-fade-up">
-                <div className="h-12 w-12 rounded-full bg-[#FFD84D]/20 flex items-center justify-center flex-shrink-0">
-                  <metric.icon className="h-6 w-6 text-[#FFD84D]" />
+              <div key={index} className="flex flex-col items-center text-center gap-4 p-8 bg-background rounded-sm border border-border shadow-card hover:shadow-hover transition-smooth animate-fade-up">
+                <div className="h-12 w-12 rounded-sm bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <metric.icon className="h-6 w-6 text-primary" />
                 </div>
-                <p className="text-white font-medium">{metric.text}</p>
+                <p className="text-foreground font-medium text-sm">{metric.text}</p>
               </div>
             ))}
           </div>
@@ -127,34 +126,34 @@ const Home = () => {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center mb-16 animate-fade-up">
-            <h2 className="font-heading text-4xl md:text-5xl font-semibold mb-4 text-[#111111]">Our Services</h2>
-            <p className="text-xl text-[#5B5B5B] max-w-2xl mx-auto">
+      <section className="py-32 bg-background">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="text-center mb-20 animate-fade-up">
+            <h2 className="font-heading text-4xl md:text-5xl font-semibold mb-6 text-foreground">Consulting Services</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Comprehensive solutions to modernize your business operations
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {services.map((service, index) => (
-              <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth overflow-hidden group animate-fade-up border-none">
-                <div className="h-48 overflow-hidden">
+              <Card key={index} className="shadow-card hover:shadow-hover transition-smooth overflow-hidden group animate-fade-up">
+                <div className="h-56 overflow-hidden">
                   <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-smooth" />
                 </div>
-                <CardHeader className="p-6">
-                  <div className="h-12 w-12 rounded-lg bg-[#FFD84D]/10 flex items-center justify-center mb-4">
-                    <service.icon className="h-6 w-6 text-[#FFD84D]" />
+                <CardHeader className="p-8">
+                  <div className="h-12 w-12 rounded-sm bg-primary/10 flex items-center justify-center mb-4">
+                    <service.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <CardTitle className="font-heading text-xl font-semibold mb-2 text-[#111111]">{service.title}</CardTitle>
-                  <CardDescription className="text-base text-[#5B5B5B]">{service.description}</CardDescription>
+                  <CardTitle className="font-heading text-xl font-semibold mb-3 text-foreground">{service.title}</CardTitle>
+                  <CardDescription className="text-base text-muted-foreground leading-relaxed">{service.description}</CardDescription>
                 </CardHeader>
               </Card>
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Button variant="default" size="lg" asChild>
+          <div className="text-center mt-16">
+            <Button variant="outline" size="lg" asChild>
               <Link to="/services">View All Services</Link>
             </Button>
           </div>
@@ -162,28 +161,28 @@ const Home = () => {
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-20 bg-[#111111]">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center mb-16 animate-fade-up">
-            <h2 className="font-heading text-4xl md:text-5xl font-semibold mb-4 text-white">Client Success Stories</h2>
-            <p className="text-xl text-[#D1D1D1] max-w-2xl mx-auto">
+      <section className="py-32 bg-secondary">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="text-center mb-20 animate-fade-up">
+            <h2 className="font-heading text-4xl md:text-5xl font-semibold mb-6 text-foreground">Client Success Stories</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Measurable results for businesses around the world
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {caseStudies.map((study, index) => (
-              <Card key={index} className="shadow-soft hover:shadow-glow transition-smooth p-6 bg-white/5 border-white/10 hover:bg-white/10 animate-fade-up">
+              <Card key={index} className="shadow-card hover:shadow-hover transition-smooth p-8 bg-background animate-fade-up">
                 <CardContent className="p-0">
-                  <h3 className="font-heading text-lg font-semibold mb-3 text-[#FFD84D]">{study.client}</h3>
-                  <p className="text-[#D1D1D1]">{study.result}</p>
+                  <h3 className="font-heading text-base font-semibold mb-4 text-primary uppercase tracking-wide">{study.client}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{study.result}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Button variant="yellow" size="lg" asChild>
+          <div className="text-center mt-16">
+            <Button variant="outline" size="lg" asChild>
               <Link to="/case-studies">View All Case Studies</Link>
             </Button>
           </div>
@@ -191,17 +190,17 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#F5F5F5]">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="py-32 bg-background">
+        <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
-            <h2 className="font-heading text-4xl md:text-5xl font-semibold mb-6 text-[#111111]">
+            <h2 className="font-heading text-4xl md:text-5xl font-semibold mb-8 text-foreground">
               Book Your Free Audit
             </h2>
-            <p className="text-xl text-[#5B5B5B] mb-10 max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
               Schedule a consultation and discover how we can transform your operations with AI and automation.
             </p>
             <Button size="lg" asChild>
-              <Link to="/contact">Book Free Consultation</Link>
+              <Link to="/contact">Get Started</Link>
             </Button>
           </div>
         </div>
