@@ -81,22 +81,22 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-40 overflow-hidden bg-black">
+      <section className="relative py-24 md:py-40 overflow-hidden bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
-            <h1 className="font-poppins text-5xl md:text-7xl font-extrabold mb-4 leading-tight tracking-tight text-white">
+            <h1 className="font-poppins text-5xl md:text-7xl font-extrabold mb-4 leading-tight tracking-tight text-[#111111]">
               Transform Your Business with{" "}
               <span className="text-[#FFD84D]">Intelligent Automation</span>
             </h1>
             <div className="w-32 h-1 bg-[#FFD84D] mx-auto mb-8"></div>
-            <p className="text-xl md:text-2xl text-[#D1D1D1] mb-10 max-w-3xl mx-auto font-light">
+            <p className="text-xl md:text-2xl text-[#5B5B5B] mb-10 max-w-3xl mx-auto font-light">
               We build secure, scalable, and AI-powered systems that make your business run itself.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild variant="yellow">
                 <Link to="/services">Explore Solutions</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="border-white text-white hover:bg-white hover:text-black">
+              <Button size="lg" variant="outline" asChild>
                 <Link to="/contact">Book Free Consultation</Link>
               </Button>
             </div>
