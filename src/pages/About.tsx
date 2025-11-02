@@ -49,7 +49,7 @@ const About = () => {
       </section>
 
       {/* Who We Are Section */}
-      <section className="py-20">
+      <section className="py-20 bg-secondary/20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <h2 className="font-poppins text-4xl md:text-5xl font-semibold mb-8 text-center">Who We Are</h2>
