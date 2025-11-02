@@ -105,21 +105,21 @@ const Home = () => {
       </section>
 
       {/* About Us Section */}
-      <section className="py-20 bg-[#F5F5F5]">
+      <section className="py-20 bg-[#111111]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-12 animate-fade-up">
-            <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-6 text-[#111111]">Who We Are</h2>
-            <p className="text-lg md:text-xl text-[#5B5B5B] leading-relaxed">
+            <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-6 text-white">Who We Are</h2>
+            <p className="text-lg md:text-xl text-[#D1D1D1] leading-relaxed">
               Suntrail AI Labs Inc. is a Canada-based IT consulting firm helping North American and global companies harness the power of automation and AI. We specialize in cloud infrastructure, workflow automation, and AI-driven analytics.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {metrics.map((metric, index) => (
-              <div key={index} className="flex flex-col items-center text-center gap-4 p-6 bg-white rounded-lg shadow-soft hover:shadow-hover transition-smooth animate-fade-up">
-                <div className="h-12 w-12 rounded-full bg-[#FFD84D]/10 flex items-center justify-center flex-shrink-0">
+              <div key={index} className="flex flex-col items-center text-center gap-4 p-6 bg-white/10 rounded-lg border border-white/10 shadow-soft hover:shadow-glow transition-smooth animate-fade-up">
+                <div className="h-12 w-12 rounded-full bg-[#FFD84D]/20 flex items-center justify-center flex-shrink-0">
                   <metric.icon className="h-6 w-6 text-[#FFD84D]" />
                 </div>
-                <p className="text-[#111111] font-medium">{metric.text}</p>
+                <p className="text-white font-medium">{metric.text}</p>
               </div>
             ))}
           </div>
