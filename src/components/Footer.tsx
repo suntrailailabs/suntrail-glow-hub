@@ -13,9 +13,7 @@ const Footer = () => {
               <img src={logo} alt="Suntrail AI Labs" className="h-10 w-10" />
               <span className="font-bold text-lg">Suntrail AI Labs</span>
             </Link>
-            <p className="text-muted-foreground text-sm">
-              Empowering businesses with intelligent design & automation.
-            </p>
+            <p className="text-muted-foreground text-sm">Empowering businesses with intelligent design & automation.</p>
           </div>
 
           {/* Quick Links */}
@@ -43,7 +41,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/case-studies" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
+                <Link
+                  to="/case-studies"
+                  className="text-sm text-muted-foreground hover:text-foreground transition-smooth"
+                >
                   Case Studies
                 </Link>
               </li>
@@ -64,12 +65,8 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Connect</h3>
             <div className="space-y-2 mb-4">
-              <p className="text-sm text-muted-foreground">
-                📍 Mississauga, ON, Canada
-              </p>
-              <p className="text-sm text-muted-foreground">
-                📧 info@suntrailailabs.com
-              </p>
+              <p className="text-sm text-muted-foreground">📍 Mississauga, ON, Canada</p>
+              <p className="text-sm text-muted-foreground">📧 contact@suntrailailabs.com</p>
             </div>
             <a
               href="https://www.linkedin.com/company/suntrail-ai-labs-inc/"
