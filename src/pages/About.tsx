@@ -86,24 +86,24 @@ const About = () => {
       </section>
 
       {/* Core Approach */}
-      <section className="py-20 bg-[#F5F5F5]">
+      <section className="py-20 bg-[#111111]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto animate-fade-up">
-            <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-4 text-center text-[#111111]">Our Approach</h2>
-            <p className="text-xl text-[#5B5B5B] text-center mb-12 max-w-3xl mx-auto">
+            <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-4 text-center text-white">Our Approach</h2>
+            <p className="text-xl text-[#D1D1D1] text-center mb-12 max-w-3xl mx-auto">
               Our core principles guide every project and client relationship
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {beliefs.map((belief, index) => (
-                <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth p-6 bg-white border-none">
+                <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth p-6 bg-white/10 border-white/10">
                   <CardContent className="p-0">
                     <div className="flex items-start gap-4">
-                      <div className="h-12 w-12 rounded-lg bg-[#FFD84D]/10 flex items-center justify-center flex-shrink-0">
+                      <div className="h-12 w-12 rounded-lg bg-[#FFD84D]/20 flex items-center justify-center flex-shrink-0">
                         <belief.icon className="h-6 w-6 text-[#FFD84D]" />
                       </div>
                       <div>
-                        <h3 className="font-poppins text-xl font-semibold mb-2 text-[#111111]">{belief.title}</h3>
-                        <p className="text-[#5B5B5B]">{belief.description}</p>
+                        <h3 className="font-poppins text-xl font-semibold mb-2 text-white">{belief.title}</h3>
+                        <p className="text-[#D1D1D1]">{belief.description}</p>
                       </div>
                     </div>
                   </CardContent>
