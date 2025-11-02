@@ -147,13 +147,13 @@ const Careers = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#F5F5F5]">
+      <section className="py-20 bg-[#111111]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
-            <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-6 text-[#111111]">
+            <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-6 text-white">
               Ready to Make an Impact?
             </h2>
-            <p className="text-xl text-[#5B5B5B] mb-10 max-w-2xl mx-auto">
+            <p className="text-xl text-[#D1D1D1] mb-10 max-w-2xl mx-auto">
               Submit your application and join our mission to transform businesses through intelligent technology.
             </p>
             <Button size="lg" asChild>
