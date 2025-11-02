@@ -50,15 +50,15 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <Card className="shadow-soft bg-white/5 border-white/10">
+              <Card className="shadow-soft bg-white border-[#E5E5E5]">
                 <CardHeader>
-                  <CardTitle className="font-poppins text-3xl text-white">Get in Touch</CardTitle>
+                  <CardTitle className="font-poppins text-3xl text-[#111111]">Get in Touch</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="name" className="text-white">
+                        <Label htmlFor="name" className="text-[#111111]">
                           Name *
                         </Label>
                         <Input
@@ -66,11 +66,11 @@ const Contact = () => {
                           name="name"
                           required
                           placeholder="Your name"
-                          className="bg-black text-[#111111]"
+                          className="bg-white text-[#111111]"
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="email" className="text-white">
+                        <Label htmlFor="email" className="text-[#111111]">
                           Email *
                         </Label>
                         <Input
@@ -79,13 +79,13 @@ const Contact = () => {
                           type="email"
                           required
                           placeholder="you@company.com"
-                          className="bg-black text-[#111111]"
+                          className="bg-white text-[#111111]"
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="company" className="text-white">
+                      <Label htmlFor="company" className="text-[#111111]">
                         Company
                       </Label>
                       <Input
@@ -97,7 +97,7 @@ const Contact = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="service" className="text-white">
+                      <Label htmlFor="service" className="text-[#111111]">
                         Service Interest *
                       </Label>
                       <Select name="service" required>
@@ -115,7 +115,7 @@ const Contact = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="budget" className="text-white">
+                      <Label htmlFor="budget" className="text-[#111111]">
                         Budget Range
                       </Label>
                       <Select name="budget">
@@ -132,7 +132,7 @@ const Contact = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message" className="text-white">
+                      <Label htmlFor="message" className="text-[#111111]">
                         Message *
                       </Label>
                       <Textarea
@@ -155,15 +155,15 @@ const Contact = () => {
 
             {/* Contact Info */}
             <div className="space-y-6">
-              <Card className="shadow-soft bg-white/5 border-white/10">
+              <Card className="shadow-soft bg-white border-[#E5E5E5]">
                 <CardContent className="p-6 space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="h-12 w-12 rounded-lg bg-[#FFD84D]/20 flex items-center justify-center flex-shrink-0">
                       <MapPin className="h-6 w-6 text-[#FFD84D]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1 text-white">Location</h3>
-                      <p className="text-sm text-[#D1D1D1]">Mississauga, ON, Canada</p>
+                      <h3 className="font-semibold mb-1 text-[#111111]">Location</h3>
+                      <p className="text-sm text-[#5B5B5B]">Mississauga, ON, Canada</p>
                     </div>
                   </div>
 
@@ -172,10 +172,10 @@ const Contact = () => {
                       <Mail className="h-6 w-6 text-[#FFD84D]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1 text-white">Email</h3>
+                      <h3 className="font-semibold mb-1 text-[#111111]">Email</h3>
                       <a
                         href="mailto:info@suntrailailabs.com"
-                        className="text-sm text-[#D1D1D1] hover:text-[#FFD84D] transition-smooth"
+                        className="text-sm text-[#5B5B5B] hover:text-[#FFD84D] transition-smooth"
                       >
                         info@suntrailailabs.com
                       </a>
@@ -187,8 +187,8 @@ const Contact = () => {
                       <Clock className="h-6 w-6 text-[#FFD84D]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1 text-white">Response Time</h3>
-                      <p className="text-sm text-[#D1D1D1]">Within 24 hours</p>
+                      <h3 className="font-semibold mb-1 text-[#111111]">Response Time</h3>
+                      <p className="text-sm text-[#5B5B5B]">Within 24 hours</p>
                     </div>
                   </div>
                 </CardContent>
