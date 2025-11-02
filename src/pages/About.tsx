@@ -47,37 +47,37 @@ const About = () => {
       </section>
 
       {/* Who We Are Section */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto animate-fade-in">
-            <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-8 text-center text-white">Who We Are</h2>
+            <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-8 text-center text-[#111111]">Who We Are</h2>
             <div className="space-y-6">
-              <p className="text-lg md:text-xl text-[#E5E5E5] leading-relaxed">
+              <p className="text-lg md:text-xl text-[#5B5B5B] leading-relaxed">
                 Suntrail AI Labs Inc. is a Canada-based IT consulting firm specializing in artificial intelligence,
                 automation, and cloud infrastructure. Founded in 2024 and headquartered in Mississauga, Ontario, we
                 serve clients across North America and Europe.
               </p>
-              <p className="text-lg md:text-xl text-[#E5E5E5] leading-relaxed">
+              <p className="text-lg md:text-xl text-[#5B5B5B] leading-relaxed">
                 Our team of experienced engineers, data scientists, and consultants work together to deliver
                 enterprise-grade solutions that drive measurable business outcomes. We combine deep technical expertise
                 with a pragmatic understanding of business operations.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-                <div className="text-center p-6 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-smooth">
+                <div className="text-center p-6 bg-[#F5F5F5] border border-[#E5E5E5] rounded-lg hover:shadow-soft transition-smooth">
                   <p className="text-3xl font-bold text-[#FFD84D] mb-2">2024</p>
-                  <p className="text-sm text-[#E5E5E5]">Founded</p>
+                  <p className="text-sm text-[#5B5B5B]">Founded</p>
                 </div>
-                <div className="text-center p-6 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-smooth">
+                <div className="text-center p-6 bg-[#F5F5F5] border border-[#E5E5E5] rounded-lg hover:shadow-soft transition-smooth">
                   <p className="text-3xl font-bold text-[#FFD84D] mb-2">15+</p>
-                  <p className="text-sm text-[#E5E5E5]">Global Clients</p>
+                  <p className="text-sm text-[#5B5B5B]">Global Clients</p>
                 </div>
-                <div className="text-center p-6 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-smooth">
+                <div className="text-center p-6 bg-[#F5F5F5] border border-[#E5E5E5] rounded-lg hover:shadow-soft transition-smooth">
                   <p className="text-3xl font-bold text-[#FFD84D] mb-2">98%</p>
-                  <p className="text-sm text-[#E5E5E5]">Satisfaction</p>
+                  <p className="text-sm text-[#5B5B5B]">Satisfaction</p>
                 </div>
-                <div className="text-center p-6 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-smooth">
+                <div className="text-center p-6 bg-[#F5F5F5] border border-[#E5E5E5] rounded-lg hover:shadow-soft transition-smooth">
                   <p className="text-3xl font-bold text-[#FFD84D] mb-2">3</p>
-                  <p className="text-sm text-[#E5E5E5]">Continents</p>
+                  <p className="text-sm text-[#5B5B5B]">Continents</p>
                 </div>
               </div>
             </div>
