@@ -31,7 +31,7 @@ const About = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-40 overflow-hidden">
+      <section className="relative py-24 md:py-40 overflow-hidden bg-[#f8f8f8]">
         <div className="absolute inset-0 z-0">
           <img src={aboutImage} alt="Corporate environment" className="w-full h-full object-cover opacity-10" />
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background"></div>
@@ -42,7 +42,8 @@ const About = () => {
               About <span className="text-primary">Suntrail AI Labs</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed">
-              A trusted technology partner helping businesses across North America and beyond transform through intelligent automation and cloud innovation.
+              A trusted technology partner helping businesses across North America and beyond transform through
+              intelligent automation and cloud innovation.
             </p>
           </div>
         </div>
@@ -55,10 +56,14 @@ const About = () => {
             <h2 className="font-poppins text-4xl md:text-5xl font-semibold mb-8 text-center">Who We Are</h2>
             <div className="space-y-6">
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Suntrail AI Labs Inc. is a Canada-based IT consulting firm specializing in artificial intelligence, automation, and cloud infrastructure. Founded in 2024 and headquartered in Mississauga, Ontario, we serve clients across North America and Europe.
+                Suntrail AI Labs Inc. is a Canada-based IT consulting firm specializing in artificial intelligence,
+                automation, and cloud infrastructure. Founded in 2024 and headquartered in Mississauga, Ontario, we
+                serve clients across North America and Europe.
               </p>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Our team of experienced engineers, data scientists, and consultants work together to deliver enterprise-grade solutions that drive measurable business outcomes. We combine deep technical expertise with a pragmatic understanding of business operations.
+                Our team of experienced engineers, data scientists, and consultants work together to deliver
+                enterprise-grade solutions that drive measurable business outcomes. We combine deep technical expertise
+                with a pragmatic understanding of business operations.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
                 <div className="text-center p-6 bg-secondary/30 rounded-lg">
@@ -117,9 +122,7 @@ const About = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <Card className="max-w-4xl mx-auto shadow-hover bg-gradient-subtle">
             <CardContent className="p-12 md:p-16 text-center">
-              <h2 className="font-poppins text-4xl md:text-5xl font-semibold mb-6">
-                Ready to Partner With Us?
-              </h2>
+              <h2 className="font-poppins text-4xl md:text-5xl font-semibold mb-6">Ready to Partner With Us?</h2>
               <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
                 Discover how Suntrail AI Labs can help modernize your operations and drive measurable growth.
               </p>
