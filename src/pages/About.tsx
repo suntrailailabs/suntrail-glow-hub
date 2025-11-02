@@ -31,17 +31,14 @@ const About = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-40 overflow-hidden bg-[#f8f8f8]">
-        <div className="absolute inset-0 z-0">
-          <img src={aboutImage} alt="Corporate environment" className="w-full h-full object-cover opacity-10" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background"></div>
-        </div>
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-poppins text-5xl md:text-7xl font-semibold mb-8 tracking-tight">
-              About <span className="text-primary">Suntrail AI Labs</span>
+      <section className="relative py-24 md:py-40 overflow-hidden bg-black">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center animate-fade-in">
+            <h1 className="font-poppins text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-white">
+              About <span className="text-[#FFD84D]">Suntrail AI Labs</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed">
+            <div className="w-32 h-1 bg-[#FFD84D] mx-auto mb-8"></div>
+            <p className="text-xl md:text-2xl text-[#D1D1D1] font-light leading-relaxed">
               A trusted technology partner helping businesses across North America and beyond transform through
               intelligent automation and cloud innovation.
             </p>
@@ -50,37 +47,37 @@ const About = () => {
       </section>
 
       {/* Who We Are Section */}
-      <section className="py-20 bg-secondary/20">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="font-poppins text-4xl md:text-5xl font-semibold mb-8 text-center">Who We Are</h2>
+          <div className="max-w-5xl mx-auto animate-fade-in">
+            <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-8 text-center text-white">Who We Are</h2>
             <div className="space-y-6">
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              <p className="text-lg md:text-xl text-[#D1D1D1] leading-relaxed">
                 Suntrail AI Labs Inc. is a Canada-based IT consulting firm specializing in artificial intelligence,
                 automation, and cloud infrastructure. Founded in 2024 and headquartered in Mississauga, Ontario, we
                 serve clients across North America and Europe.
               </p>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              <p className="text-lg md:text-xl text-[#D1D1D1] leading-relaxed">
                 Our team of experienced engineers, data scientists, and consultants work together to deliver
                 enterprise-grade solutions that drive measurable business outcomes. We combine deep technical expertise
                 with a pragmatic understanding of business operations.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-                <div className="text-center p-6 bg-secondary/30 rounded-lg">
-                  <p className="text-3xl font-bold text-primary mb-2">2024</p>
-                  <p className="text-sm text-muted-foreground">Founded</p>
+                <div className="text-center p-6 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-smooth">
+                  <p className="text-3xl font-bold text-[#FFD84D] mb-2">2024</p>
+                  <p className="text-sm text-[#D1D1D1]">Founded</p>
                 </div>
-                <div className="text-center p-6 bg-secondary/30 rounded-lg">
-                  <p className="text-3xl font-bold text-primary mb-2">15+</p>
-                  <p className="text-sm text-muted-foreground">Global Clients</p>
+                <div className="text-center p-6 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-smooth">
+                  <p className="text-3xl font-bold text-[#FFD84D] mb-2">15+</p>
+                  <p className="text-sm text-[#D1D1D1]">Global Clients</p>
                 </div>
-                <div className="text-center p-6 bg-secondary/30 rounded-lg">
-                  <p className="text-3xl font-bold text-primary mb-2">98%</p>
-                  <p className="text-sm text-muted-foreground">Satisfaction</p>
+                <div className="text-center p-6 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-smooth">
+                  <p className="text-3xl font-bold text-[#FFD84D] mb-2">98%</p>
+                  <p className="text-sm text-[#D1D1D1]">Satisfaction</p>
                 </div>
-                <div className="text-center p-6 bg-secondary/30 rounded-lg">
-                  <p className="text-3xl font-bold text-primary mb-2">3</p>
-                  <p className="text-sm text-muted-foreground">Continents</p>
+                <div className="text-center p-6 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-smooth">
+                  <p className="text-3xl font-bold text-[#FFD84D] mb-2">3</p>
+                  <p className="text-sm text-[#D1D1D1]">Continents</p>
                 </div>
               </div>
             </div>
