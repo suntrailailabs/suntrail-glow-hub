@@ -45,7 +45,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Contact Form */}
@@ -58,22 +58,48 @@ const Contact = () => {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="name" className="text-white">Name *</Label>
-                        <Input id="name" name="name" required placeholder="Your name" className="bg-white text-[#111111]" />
+                        <Label htmlFor="name" className="text-white">
+                          Name *
+                        </Label>
+                        <Input
+                          id="name"
+                          name="name"
+                          required
+                          placeholder="Your name"
+                          className="bg-white text-[#111111]"
+                        />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="email" className="text-white">Email *</Label>
-                        <Input id="email" name="email" type="email" required placeholder="you@company.com" className="bg-white text-[#111111]" />
+                        <Label htmlFor="email" className="text-white">
+                          Email *
+                        </Label>
+                        <Input
+                          id="email"
+                          name="email"
+                          type="email"
+                          required
+                          placeholder="you@company.com"
+                          className="bg-white text-[#111111]"
+                        />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="company" className="text-white">Company</Label>
-                      <Input id="company" name="company" placeholder="Your company name" className="bg-white text-[#111111]" />
+                      <Label htmlFor="company" className="text-white">
+                        Company
+                      </Label>
+                      <Input
+                        id="company"
+                        name="company"
+                        placeholder="Your company name"
+                        className="bg-white text-[#111111]"
+                      />
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="service" className="text-white">Service Interest *</Label>
+                      <Label htmlFor="service" className="text-white">
+                        Service Interest *
+                      </Label>
                       <Select name="service" required>
                         <SelectTrigger className="bg-white text-[#111111]">
                           <SelectValue placeholder="Select a service" />
@@ -89,7 +115,9 @@ const Contact = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="budget" className="text-white">Budget Range</Label>
+                      <Label htmlFor="budget" className="text-white">
+                        Budget Range
+                      </Label>
                       <Select name="budget">
                         <SelectTrigger className="bg-white text-[#111111]">
                           <SelectValue placeholder="Select budget range" />
@@ -104,7 +132,9 @@ const Contact = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message" className="text-white">Message *</Label>
+                      <Label htmlFor="message" className="text-white">
+                        Message *
+                      </Label>
                       <Textarea
                         id="message"
                         name="message"
@@ -133,9 +163,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1 text-white">Location</h3>
-                      <p className="text-sm text-[#D1D1D1]">
-                        Mississauga, ON, Canada
-                      </p>
+                      <p className="text-sm text-[#D1D1D1]">Mississauga, ON, Canada</p>
                     </div>
                   </div>
 
@@ -160,9 +188,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1 text-white">Response Time</h3>
-                      <p className="text-sm text-[#D1D1D1]">
-                        Within 24 hours
-                      </p>
+                      <p className="text-sm text-[#D1D1D1]">Within 24 hours</p>
                     </div>
                   </div>
                 </CardContent>
