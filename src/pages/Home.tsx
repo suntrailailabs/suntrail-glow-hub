@@ -105,18 +105,18 @@ const Home = () => {
       </section>
 
       {/* About Us Section */}
-      <section className="py-20 bg-[#F8F8F8]">
+      <section className="py-20 bg-[#F5F5F5]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-12 animate-fade-up">
             <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-6 text-[#111111]">Who We Are</h2>
-            <p className="text-lg md:text-xl text-[#111111]/80 leading-relaxed">
+            <p className="text-lg md:text-xl text-[#5B5B5B] leading-relaxed">
               Suntrail AI Labs Inc. is a Canada-based IT consulting firm helping North American and global companies harness the power of automation and AI. We specialize in cloud infrastructure, workflow automation, and AI-driven analytics.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {metrics.map((metric, index) => (
               <div key={index} className="flex flex-col items-center text-center gap-4 p-6 bg-white rounded-lg shadow-soft hover:shadow-hover transition-smooth animate-fade-up">
-                <div className="h-12 w-12 rounded-full bg-[#FFD84D]/20 flex items-center justify-center flex-shrink-0">
+                <div className="h-12 w-12 rounded-full bg-[#FFD84D]/10 flex items-center justify-center flex-shrink-0">
                   <metric.icon className="h-6 w-6 text-[#FFD84D]" />
                 </div>
                 <p className="text-[#111111] font-medium">{metric.text}</p>
@@ -131,7 +131,7 @@ const Home = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16 animate-fade-up">
             <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-4 text-[#111111]">Our Services</h2>
-            <p className="text-xl text-[#111111]/70 max-w-2xl mx-auto">
+            <p className="text-xl text-[#5B5B5B] max-w-2xl mx-auto">
               Comprehensive solutions to modernize your business operations
             </p>
           </div>
@@ -143,11 +143,11 @@ const Home = () => {
                   <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-smooth" />
                 </div>
                 <CardHeader className="p-6">
-                  <div className="h-12 w-12 rounded-lg bg-[#FFD84D]/20 flex items-center justify-center mb-4">
+                  <div className="h-12 w-12 rounded-lg bg-[#FFD84D]/10 flex items-center justify-center mb-4">
                     <service.icon className="h-6 w-6 text-[#FFD84D]" />
                   </div>
                   <CardTitle className="font-poppins text-xl mb-2 text-[#111111]">{service.title}</CardTitle>
-                  <CardDescription className="text-base text-[#111111]/70">{service.description}</CardDescription>
+                  <CardDescription className="text-base text-[#5B5B5B]">{service.description}</CardDescription>
                 </CardHeader>
               </Card>
             ))}
@@ -191,16 +191,16 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#FFD84D]">
+      <section className="py-20 bg-[#F5F5F5]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-6 text-[#111111]">
               Book Your Free Audit
             </h2>
-            <p className="text-xl text-[#111111]/80 mb-10 max-w-2xl mx-auto">
+            <p className="text-xl text-[#5B5B5B] mb-10 max-w-2xl mx-auto">
               Schedule a consultation and discover how we can transform your operations with AI and automation.
             </p>
-            <Button size="lg" asChild className="bg-[#111111] text-white hover:bg-black shadow-hover">
+            <Button size="lg" asChild>
               <Link to="/contact">Book Free Consultation</Link>
             </Button>
           </div>

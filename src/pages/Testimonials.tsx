@@ -44,13 +44,13 @@ const Testimonials = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-24 md:py-40 bg-[#F8F8F8]">
+      <section className="py-24 md:py-40 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <h1 className="font-poppins text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-[#111111]">
               Client <span className="text-[#FFD84D]">Testimonials</span>
             </h1>
-            <p className="text-xl md:text-2xl text-[#111111]/80 font-light">
+            <p className="text-xl md:text-2xl text-[#5B5B5B] font-light">
               Trusted by businesses across North America and Europe
             </p>
           </div>
@@ -58,11 +58,11 @@ const Testimonials = () => {
       </section>
 
       {/* Testimonials Grid */}
-      <section className="py-20 bg-[#F8F8F8]">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth bg-white border-none animate-fade-up">
+              <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth bg-[#F5F5F5] border-none animate-fade-up">
                 <CardContent className="p-6">
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
@@ -72,8 +72,8 @@ const Testimonials = () => {
                   <p className="text-[#111111] mb-6 leading-relaxed">"{testimonial.quote}"</p>
                   <div className="border-t border-[#111111]/10 pt-4">
                     <p className="font-semibold text-[#111111]">{testimonial.author}</p>
-                    <p className="text-sm text-[#111111]/70">{testimonial.role}</p>
-                    <p className="text-sm text-[#111111]/70">{testimonial.location}</p>
+                    <p className="text-sm text-[#5B5B5B]">{testimonial.role}</p>
+                    <p className="text-sm text-[#5B5B5B]">{testimonial.location}</p>
                   </div>
                 </CardContent>
               </Card>

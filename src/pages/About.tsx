@@ -52,12 +52,12 @@ const About = () => {
           <div className="max-w-5xl mx-auto animate-fade-in">
             <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-8 text-center text-white">Who We Are</h2>
             <div className="space-y-6">
-              <p className="text-lg md:text-xl text-[#D1D1D1] leading-relaxed">
+              <p className="text-lg md:text-xl text-[#E5E5E5] leading-relaxed">
                 Suntrail AI Labs Inc. is a Canada-based IT consulting firm specializing in artificial intelligence,
                 automation, and cloud infrastructure. Founded in 2024 and headquartered in Mississauga, Ontario, we
                 serve clients across North America and Europe.
               </p>
-              <p className="text-lg md:text-xl text-[#D1D1D1] leading-relaxed">
+              <p className="text-lg md:text-xl text-[#E5E5E5] leading-relaxed">
                 Our team of experienced engineers, data scientists, and consultants work together to deliver
                 enterprise-grade solutions that drive measurable business outcomes. We combine deep technical expertise
                 with a pragmatic understanding of business operations.
@@ -65,19 +65,19 @@ const About = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
                 <div className="text-center p-6 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-smooth">
                   <p className="text-3xl font-bold text-[#FFD84D] mb-2">2024</p>
-                  <p className="text-sm text-[#D1D1D1]">Founded</p>
+                  <p className="text-sm text-[#E5E5E5]">Founded</p>
                 </div>
                 <div className="text-center p-6 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-smooth">
                   <p className="text-3xl font-bold text-[#FFD84D] mb-2">15+</p>
-                  <p className="text-sm text-[#D1D1D1]">Global Clients</p>
+                  <p className="text-sm text-[#E5E5E5]">Global Clients</p>
                 </div>
                 <div className="text-center p-6 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-smooth">
                   <p className="text-3xl font-bold text-[#FFD84D] mb-2">98%</p>
-                  <p className="text-sm text-[#D1D1D1]">Satisfaction</p>
+                  <p className="text-sm text-[#E5E5E5]">Satisfaction</p>
                 </div>
                 <div className="text-center p-6 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-smooth">
                   <p className="text-3xl font-bold text-[#FFD84D] mb-2">3</p>
-                  <p className="text-sm text-[#D1D1D1]">Continents</p>
+                  <p className="text-sm text-[#E5E5E5]">Continents</p>
                 </div>
               </div>
             </div>
@@ -86,11 +86,11 @@ const About = () => {
       </section>
 
       {/* Core Approach */}
-      <section className="py-20 bg-[#F8F8F8]">
+      <section className="py-20 bg-[#F5F5F5]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto animate-fade-up">
             <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-4 text-center text-[#111111]">Our Approach</h2>
-            <p className="text-xl text-[#111111]/70 text-center mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-[#5B5B5B] text-center mb-12 max-w-3xl mx-auto">
               Our core principles guide every project and client relationship
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -98,12 +98,12 @@ const About = () => {
                 <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth p-6 bg-white border-none">
                   <CardContent className="p-0">
                     <div className="flex items-start gap-4">
-                      <div className="h-12 w-12 rounded-lg bg-[#FFD84D]/20 flex items-center justify-center flex-shrink-0">
+                      <div className="h-12 w-12 rounded-lg bg-[#FFD84D]/10 flex items-center justify-center flex-shrink-0">
                         <belief.icon className="h-6 w-6 text-[#FFD84D]" />
                       </div>
                       <div>
                         <h3 className="font-poppins text-xl font-semibold mb-2 text-[#111111]">{belief.title}</h3>
-                        <p className="text-[#111111]/70">{belief.description}</p>
+                        <p className="text-[#5B5B5B]">{belief.description}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -117,10 +117,10 @@ const About = () => {
       {/* CTA Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
-          <Card className="max-w-4xl mx-auto shadow-hover bg-[#F8F8F8] border-none animate-fade-up">
+          <Card className="max-w-4xl mx-auto shadow-hover bg-[#F5F5F5] border-none animate-fade-up">
             <CardContent className="p-12 md:p-16 text-center">
               <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-6 text-[#111111]">Ready to Partner With Us?</h2>
-              <p className="text-xl text-[#111111]/70 mb-10 max-w-2xl mx-auto">
+              <p className="text-xl text-[#5B5B5B] mb-10 max-w-2xl mx-auto">
                 Discover how Suntrail AI Labs can help modernize your operations and drive measurable growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

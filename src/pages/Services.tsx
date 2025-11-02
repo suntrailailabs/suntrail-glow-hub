@@ -66,13 +66,13 @@ const Services = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-24 md:py-40 bg-[#FFD84D]">
+      <section className="py-24 md:py-40 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <h1 className="font-poppins text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-[#111111]">
-              Our <span className="text-black">Solutions</span>
+              Our <span className="text-[#FFD84D]">Solutions</span>
             </h1>
-            <p className="text-xl md:text-2xl text-[#111111]/80 font-light">
+            <p className="text-xl md:text-2xl text-[#5B5B5B] font-light">
               Comprehensive technology services designed to modernize operations and accelerate growth.
             </p>
           </div>
@@ -84,18 +84,18 @@ const Services = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="space-y-12 max-w-6xl mx-auto">
             {services.map((service, index) => (
-              <Card key={index} className={`shadow-soft hover:shadow-hover transition-smooth overflow-hidden animate-fade-up border-none ${index % 2 === 0 ? 'bg-white' : 'bg-[#F8F8F8]'}`}>
+              <Card key={index} className={`shadow-soft hover:shadow-hover transition-smooth overflow-hidden animate-fade-up border-none ${index % 2 === 0 ? 'bg-white' : 'bg-[#F5F5F5]'}`}>
                 <div className="grid md:grid-cols-2 gap-0">
                   <div className={`h-72 md:h-auto ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
                     <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
                   </div>
                   <div className={`p-8 md:p-12 ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'} flex flex-col justify-center`}>
-                    <div className="h-12 w-12 rounded-lg bg-[#FFD84D]/20 flex items-center justify-center mb-6">
+                    <div className="h-12 w-12 rounded-lg bg-[#FFD84D]/10 flex items-center justify-center mb-6">
                       <service.icon className="h-6 w-6 text-[#FFD84D]" />
                     </div>
                     <h2 className="font-poppins text-3xl md:text-4xl font-bold mb-2 text-[#111111]">{service.title}</h2>
                     <p className="text-lg text-[#FFD84D] mb-4 font-semibold">{service.tagline}</p>
-                    <p className="text-base text-[#111111]/70 mb-6 leading-relaxed">{service.description}</p>
+                    <p className="text-base text-[#5B5B5B] mb-6 leading-relaxed">{service.description}</p>
                     <ul className="space-y-3">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start gap-3">
@@ -113,13 +113,13 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#F8F8F8]">
+      <section className="py-20 bg-[#F5F5F5]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-6 text-[#111111]">
               Let's Discuss Your Project
             </h2>
-            <p className="text-xl text-[#111111]/70 mb-10 max-w-2xl mx-auto">
+            <p className="text-xl text-[#5B5B5B] mb-10 max-w-2xl mx-auto">
               Schedule a free consultation to explore how our solutions can address your specific business challenges.
             </p>
             <Button size="lg" asChild>

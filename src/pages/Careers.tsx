@@ -79,7 +79,7 @@ const Careers = () => {
               Join the Future of <span className="text-[#FFD84D]">Intelligent Automation</span>
             </h1>
             <div className="w-32 h-1 bg-[#FFD84D] mx-auto mb-8"></div>
-            <p className="text-xl md:text-2xl text-[#111111]/80 font-light">
+            <p className="text-xl md:text-2xl text-[#5B5B5B] font-light">
               Build cutting-edge solutions with a team of innovators and problem solvers
             </p>
           </div>
@@ -87,15 +87,15 @@ const Careers = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#F5F5F5]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto animate-fade-up">
             <h2 className="font-poppins text-4xl font-bold text-center mb-12 text-[#111111]">Our Values</h2>
-            <Card className="shadow-soft bg-[#F8F8F8] border-none">
+            <Card className="shadow-soft bg-white border-none">
               <CardContent className="p-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {values.map((value, index) => (
-                    <div key={index} className="flex items-center gap-3 p-4 bg-white rounded-lg">
+                    <div key={index} className="flex items-center gap-3 p-4 bg-[#F5F5F5] rounded-lg">
                       <div className="h-2 w-2 bg-[#FFD84D] rounded-full flex-shrink-0"></div>
                       <p className="text-lg font-medium text-[#111111]">{value}</p>
                     </div>
@@ -108,31 +108,31 @@ const Careers = () => {
       </section>
 
       {/* Open Positions */}
-      <section className="py-20 bg-[#F8F8F8]">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mb-16 text-center animate-fade-up">
             <h2 className="font-poppins text-4xl font-bold mb-4 text-[#111111]">Open Positions</h2>
-            <p className="text-xl text-[#111111]/70">Join our growing team</p>
+            <p className="text-xl text-[#5B5B5B]">Join our growing team</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {positions.map((position, index) => (
-              <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth bg-white border-none animate-fade-up">
+              <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth bg-[#F5F5F5] border-none animate-fade-up">
                 <CardHeader>
-                  <div className="h-12 w-12 rounded-lg bg-[#FFD84D]/20 flex items-center justify-center mb-4">
+                  <div className="h-12 w-12 rounded-lg bg-[#FFD84D]/10 flex items-center justify-center mb-4">
                     <position.icon className="h-6 w-6 text-[#FFD84D]" />
                   </div>
                   <CardTitle className="font-poppins text-2xl mb-2 text-[#111111]">{position.title}</CardTitle>
-                  <CardDescription className="text-sm font-semibold text-[#111111]/70 mb-4">
+                  <CardDescription className="text-sm font-semibold text-[#5B5B5B] mb-4">
                     {position.location}
                   </CardDescription>
-                  <p className="text-[#111111]/80">{position.description}</p>
+                  <p className="text-[#111111]">{position.description}</p>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2 mb-6">
                     {position.requirements.map((req, reqIndex) => (
                       <div key={reqIndex} className="flex items-start gap-2">
                         <div className="h-1.5 w-1.5 bg-[#FFD84D] rounded-full flex-shrink-0 mt-2"></div>
-                        <p className="text-sm text-[#111111]/70">{req}</p>
+                        <p className="text-sm text-[#5B5B5B]">{req}</p>
                       </div>
                     ))}
                   </div>
@@ -147,13 +147,13 @@ const Careers = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#F5F5F5]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-6 text-[#111111]">
               Ready to Make an Impact?
             </h2>
-            <p className="text-xl text-[#111111]/70 mb-10 max-w-2xl mx-auto">
+            <p className="text-xl text-[#5B5B5B] mb-10 max-w-2xl mx-auto">
               Submit your application and join our mission to transform businesses through intelligent technology.
             </p>
             <Button size="lg" asChild>
