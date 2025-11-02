@@ -132,7 +132,7 @@ const CaseStudies = () => {
                         className="flex flex-col items-center text-center p-4 rounded-lg bg-[#F5F5F5] border border-[#111111]/10"
                       >
                         <result.icon className="h-8 w-8 text-[#FFD84D] mb-3" />
-                        <p className="text-2xl font-bold mb-1 text-[#FFD84D]">{result.value}</p>
+                        <p className="text-2xl font-bold mb-1 text-[#111111]">{result.value}</p>
                         <p className="text-sm text-[#5B5B5B]">{result.label}</p>
                       </div>
                     ))}
