@@ -1,109 +1,140 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Lightbulb, Shield, Target, Zap } from "lucide-react";
-import aboutTeamImage from "@/assets/about-team.jpg";
+import { Target, Users, Shield, Lightbulb } from "lucide-react";
+import aboutImage from "@/assets/about-corporate.jpg";
 
 const About = () => {
   const beliefs = [
     {
-      icon: Lightbulb,
-      title: "Simplicity scales.",
-      description: "Complex systems break. We build simple, elegant solutions that work at any scale.",
-    },
-    {
-      icon: Zap,
-      title: "Automation beats delegation.",
-      description: "Why hire when you can automate? We free your team to focus on what matters.",
-    },
-    {
       icon: Target,
-      title: "Design isn't art — it's conversion with style.",
-      description: "Every pixel has a purpose. Beautiful design that drives measurable results.",
+      title: "Results-Driven",
+      description: "We measure success by the tangible outcomes we deliver for our clients.",
+    },
+    {
+      icon: Shield,
+      title: "Security First",
+      description: "Every solution is built with enterprise-grade security and compliance in mind.",
+    },
+    {
+      icon: Lightbulb,
+      title: "Innovation",
+      description: "We stay ahead of technological trends to provide cutting-edge solutions.",
+    },
+    {
+      icon: Users,
+      title: "Partnership",
+      description: "We work as an extension of your team, committed to your long-term success.",
     },
   ];
 
   return (
-    <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4 lg:px-8">
-        {/* Header */}
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">
-            We Don't Sell Design.{" "}
-            <span className="relative">
-              <span className="relative z-10">We Sell Performance.</span>
-              <span className="absolute bottom-2 left-0 w-full h-4 bg-primary/30 -rotate-1"></span>
-            </span>
-          </h1>
-          <div className="h-1 w-24 bg-foreground mx-auto mt-8"></div>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative py-24 md:py-40 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src={aboutImage} alt="Corporate environment" className="w-full h-full object-cover opacity-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background"></div>
         </div>
-
-        {/* Team Image */}
-        <div className="max-w-5xl mx-auto mb-16">
-          <img src={aboutTeamImage} alt="Our team collaborating" className="w-full h-[400px] object-cover rounded-2xl shadow-hover" />
-        </div>
-
-        {/* About Content */}
-        <div className="max-w-4xl mx-auto mb-20">
-          <Card className="shadow-soft border-2">
-            <CardContent className="p-10 md:p-14">
-              <p className="text-xl text-foreground leading-relaxed mb-6">
-                Suntrail AI Labs is built for growth-minded teams that value outcomes over activity.
-              </p>
-              <p className="text-xl text-foreground leading-relaxed mb-6">
-                We create digital systems that generate leads, automate work, and multiply profit — all while you sleep.
-              </p>
-              <div className="bg-primary/10 p-6 rounded-lg mt-8">
-                <h3 className="text-lg font-bold mb-2">Our Mission</h3>
-                <p className="text-lg text-foreground/90">
-                  To help businesses scale without more headcount — through intelligent design and automation.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Core Beliefs */}
-        <div className="mb-20">
-          <h2 className="font-serif text-4xl font-bold text-center mb-12">Core Beliefs</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {beliefs.map((belief, index) => (
-              <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth border-2">
-                <CardContent className="p-8">
-                  <div className="h-16 w-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                    <belief.icon className="h-8 w-8 text-foreground" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4">{belief.title}</h3>
-                  <p className="text-muted-foreground">{belief.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="font-poppins text-5xl md:text-7xl font-semibold mb-8 tracking-tight">
+              About <span className="text-primary">Suntrail AI Labs</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed">
+              A trusted technology partner helping businesses across North America and beyond transform through intelligent automation and cloud innovation.
+            </p>
           </div>
         </div>
+      </section>
 
-        {/* Contact CTA */}
-        <div className="max-w-3xl mx-auto">
-          <Card className="shadow-soft border-2">
-            <CardContent className="p-10 md:p-12 text-center">
-              <h2 className="font-serif text-3xl font-bold mb-6">Let's Build Something That Works</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Ready to scale smarter? Book a free consultation and see how we can transform your operations.
+      {/* Who We Are Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="font-poppins text-4xl md:text-5xl font-semibold mb-8 text-center">Who We Are</h2>
+            <div className="space-y-6">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                Suntrail AI Labs Inc. is a Canada-based IT consulting firm specializing in artificial intelligence, automation, and cloud infrastructure. Founded in 2024 and headquartered in Mississauga, Ontario, we serve clients across North America and Europe.
               </p>
-              <div className="space-y-4 mb-8 text-left max-w-md mx-auto">
-                <p className="text-sm text-foreground">
-                  📍 Mississauga, ON, Canada
-                </p>
-                <p className="text-sm text-foreground">
-                  📧 info@suntrailailabs.com
-                </p>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                Our team of experienced engineers, data scientists, and consultants work together to deliver enterprise-grade solutions that drive measurable business outcomes. We combine deep technical expertise with a pragmatic understanding of business operations.
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+                <div className="text-center p-6 bg-secondary/30 rounded-lg">
+                  <p className="text-3xl font-bold text-primary mb-2">2024</p>
+                  <p className="text-sm text-muted-foreground">Founded</p>
+                </div>
+                <div className="text-center p-6 bg-secondary/30 rounded-lg">
+                  <p className="text-3xl font-bold text-primary mb-2">15+</p>
+                  <p className="text-sm text-muted-foreground">Global Clients</p>
+                </div>
+                <div className="text-center p-6 bg-secondary/30 rounded-lg">
+                  <p className="text-3xl font-bold text-primary mb-2">98%</p>
+                  <p className="text-sm text-muted-foreground">Satisfaction</p>
+                </div>
+                <div className="text-center p-6 bg-secondary/30 rounded-lg">
+                  <p className="text-3xl font-bold text-primary mb-2">3</p>
+                  <p className="text-sm text-muted-foreground">Continents</p>
+                </div>
               </div>
-              <Button size="lg" asChild>
-                <Link to="/contact">Book Free Consultation</Link>
-              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Approach */}
+      <section className="py-20 bg-secondary/30">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="font-poppins text-4xl md:text-5xl font-semibold mb-4 text-center">Our Approach</h2>
+            <p className="text-xl text-muted-foreground text-center mb-12 max-w-3xl mx-auto">
+              Our core principles guide every project and client relationship
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {beliefs.map((belief, index) => (
+                <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth p-6">
+                  <CardContent className="p-0">
+                    <div className="flex items-start gap-4">
+                      <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <belief.icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-poppins text-xl font-semibold mb-2">{belief.title}</h3>
+                        <p className="text-muted-foreground">{belief.description}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 lg:px-8">
+          <Card className="max-w-4xl mx-auto shadow-hover bg-gradient-subtle">
+            <CardContent className="p-12 md:p-16 text-center">
+              <h2 className="font-poppins text-4xl md:text-5xl font-semibold mb-6">
+                Ready to Partner With Us?
+              </h2>
+              <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+                Discover how Suntrail AI Labs can help modernize your operations and drive measurable growth.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" asChild>
+                  <Link to="/contact">Schedule Consultation</Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <Link to="/services">View Solutions</Link>
+                </Button>
+              </div>
             </CardContent>
           </Card>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

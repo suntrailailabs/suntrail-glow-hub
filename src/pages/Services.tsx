@@ -1,126 +1,135 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Globe, Megaphone, TrendingUp, Bot, Check } from "lucide-react";
-import servicesImage from "@/assets/services-automation.jpg";
+import { Cloud, Bot, Code, BarChart3, Check } from "lucide-react";
+import cloudImage from "@/assets/service-cloud.jpg";
+import automationImage from "@/assets/service-automation-ai.jpg";
+import webAppImage from "@/assets/service-web-app.jpg";
+import analyticsImage from "@/assets/service-analytics.jpg";
 
 const Services = () => {
   const services = [
     {
-      icon: Globe,
-      title: "Website Design & Build",
-      tagline: "Build digital real estate that sells.",
-      features: [
-        "Fast-loading, conversion-optimized websites",
-        "SEO-ready, analytics installed",
-        "Landing, booking, or ecommerce",
-        "Mobile-first & scalable",
-      ],
-    },
-    {
-      icon: Megaphone,
-      title: "Social Media Content Package",
-      tagline: "Turn your content into cash flow.",
-      features: [
-        "AI-powered monthly content calendar",
-        "12–20 ready-to-post designs",
-        "Growth captions, hooks & analytics",
-        "Platform-optimized for Instagram & LinkedIn",
-      ],
-    },
-    {
-      icon: TrendingUp,
-      title: "SEO & Marketing Campaigns",
-      tagline: "Rank higher. Convert faster.",
-      features: [
-        "Keyword research + ad strategy",
-        "Google & Meta campaign setup",
-        "CRO tracking & dashboards",
-        "Weekly ROI reports",
-      ],
-    },
-    {
       icon: Bot,
-      title: "AI Automations for Your Business",
-      tagline: "Work 30% less, grow 2× faster.",
+      title: "AI & Automation Consulting",
+      tagline: "Intelligent systems that work for you",
+      description: "Transform your business processes with custom automation solutions powered by AI and modern workflow tools.",
+      image: automationImage,
       features: [
-        "CRM, chatbot, and workflow automation",
-        "Lead capture & email sequences",
-        "Google Workspace + payment system integrations",
-        "Real-time business dashboards",
+        "Workflow automation using n8n, Python, and AI APIs",
+        "Custom chatbot development and deployment",
+        "Process mining and optimization",
+        "Integration with existing business systems",
+      ],
+    },
+    {
+      icon: Cloud,
+      title: "Cloud Infrastructure",
+      tagline: "Secure, scalable cloud solutions",
+      description: "Design, deploy, and manage enterprise-grade cloud infrastructure tailored to your business needs.",
+      image: cloudImage,
+      features: [
+        "Multi-cloud deployment (Azure, AWS, GCP)",
+        "Infrastructure as Code (IaC) implementation",
+        "Cloud security and compliance",
+        "24/7 monitoring and support",
+      ],
+    },
+    {
+      icon: Code,
+      title: "Web & App Development",
+      tagline: "Modern, responsive digital experiences",
+      description: "Build high-performance web applications and websites that deliver exceptional user experiences.",
+      image: webAppImage,
+      features: [
+        "Custom web application development",
+        "Responsive design for all devices",
+        "API development and integration",
+        "Performance optimization and SEO",
+      ],
+    },
+    {
+      icon: BarChart3,
+      title: "Data Analytics",
+      tagline: "Turn data into actionable insights",
+      description: "Unlock the power of your data with real-time analytics, visualization, and business intelligence solutions.",
+      image: analyticsImage,
+      features: [
+        "Real-time dashboards using Power BI",
+        "Data warehouse design and implementation",
+        "Databricks and big data analytics",
+        "Predictive modeling and forecasting",
       ],
     },
   ];
 
   return (
-    <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4 lg:px-8">
-        {/* Header */}
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">
-            Services That{" "}
-            <span className="relative">
-              <span className="relative z-10">Actually Scale</span>
-              <span className="absolute bottom-2 left-0 w-full h-4 bg-primary/30 -rotate-1"></span>
-            </span>
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            We don't sell hours — we build ROI machines.
-          </p>
-          <div className="h-1 w-24 bg-foreground mx-auto mt-8"></div>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="py-24 md:py-40 bg-gradient-subtle">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="font-poppins text-5xl md:text-7xl font-semibold mb-6 tracking-tight">
+              Our <span className="text-primary">Solutions</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground font-light">
+              Comprehensive technology services designed to modernize operations and accelerate growth.
+            </p>
+          </div>
         </div>
+      </section>
 
-        {/* Hero Image */}
-        <div className="max-w-6xl mx-auto mb-16">
-          <img src={servicesImage} alt="AI and automation services" className="w-full h-[400px] object-cover rounded-2xl shadow-hover" />
-        </div>
-
-        {/* Services Grid */}
-        <div className="space-y-8 max-w-6xl mx-auto mb-16">
-          {services.map((service, index) => (
-            <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth border-2">
-              <CardHeader>
-                <div className="flex items-start gap-6">
-                  <div className="h-16 w-16 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <service.icon className="h-8 w-8 text-foreground" />
+      {/* Services Grid */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="space-y-12 max-w-6xl mx-auto">
+            {services.map((service, index) => (
+              <Card key={index} className="shadow-soft hover:shadow-hover transition-smooth overflow-hidden">
+                <div className="grid md:grid-cols-2 gap-0">
+                  <div className={`h-72 md:h-auto ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
+                    <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
                   </div>
-                  <div className="flex-1">
-                    <CardTitle className="font-serif text-3xl mb-2">{service.title}</CardTitle>
-                    <p className="text-xl font-semibold text-foreground/80">{service.tagline}</p>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ml-0 md:ml-22">
-                  {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-start gap-3">
-                      <Check className="h-5 w-5 text-foreground flex-shrink-0 mt-0.5" />
-                      <p className="text-foreground/90">{feature}</p>
+                  <div className={`p-8 md:p-12 ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'} flex flex-col justify-center`}>
+                    <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
+                      <service.icon className="h-6 w-6 text-primary" />
                     </div>
-                  ))}
+                    <h2 className="font-poppins text-3xl md:text-4xl font-semibold mb-2">{service.title}</h2>
+                    <p className="text-lg text-primary mb-4 font-medium">{service.tagline}</p>
+                    <p className="text-base text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
+                    <ul className="space-y-3">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start gap-3">
+                          <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-foreground text-sm">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </CardContent>
-            </Card>
-          ))}
+              </Card>
+            ))}
+          </div>
         </div>
+      </section>
 
-        {/* CTA Section */}
-        <div className="max-w-4xl mx-auto">
-          <Card className="shadow-hover border-2">
-            <CardContent className="p-12 md:p-16 text-center">
-              <h2 className="font-serif text-4xl font-bold mb-6">
-                Ready to scale your business?
+      {/* CTA Section */}
+      <section className="py-20 bg-secondary/30">
+        <div className="container mx-auto px-4 lg:px-8">
+          <Card className="max-w-4xl mx-auto shadow-hover bg-gradient-subtle">
+            <div className="p-12 md:p-16 text-center">
+              <h2 className="font-poppins text-4xl md:text-5xl font-semibold mb-6">
+                Let's Discuss Your Project
               </h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Book a free audit and we'll show you how to 2× your efficiency in 30 days.
+              <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+                Schedule a free consultation to explore how our solutions can address your specific business challenges.
               </p>
               <Button size="lg" asChild>
-                <Link to="/contact">Book Free Audit</Link>
+                <Link to="/contact">Book Consultation</Link>
               </Button>
-            </CardContent>
+            </div>
           </Card>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
