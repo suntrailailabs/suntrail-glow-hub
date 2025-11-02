@@ -87,17 +87,17 @@ const Careers = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-[#F5F5F5]">
+      <section className="py-20 bg-[#111111]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto animate-fade-up">
-            <h2 className="font-poppins text-4xl font-bold text-center mb-12 text-[#111111]">Our Values</h2>
-            <Card className="shadow-soft bg-white border-none">
+            <h2 className="font-poppins text-4xl font-bold text-center mb-12 text-white">Our Values</h2>
+            <Card className="shadow-soft bg-white/10 border-white/10">
               <CardContent className="p-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {values.map((value, index) => (
-                    <div key={index} className="flex items-center gap-3 p-4 bg-[#F5F5F5] rounded-lg">
+                    <div key={index} className="flex items-center gap-3 p-4 bg-white/5 rounded-lg">
                       <div className="h-2 w-2 bg-[#FFD84D] rounded-full flex-shrink-0"></div>
-                      <p className="text-lg font-medium text-[#111111]">{value}</p>
+                      <p className="text-lg font-medium text-white">{value}</p>
                     </div>
                   ))}
                 </div>
