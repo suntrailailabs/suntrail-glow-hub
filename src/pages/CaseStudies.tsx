@@ -95,29 +95,29 @@ const CaseStudies = () => {
       </section>
 
       {/* Case Studies */}
-      <section className="py-20 bg-[#111111]">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="space-y-8 max-w-5xl mx-auto">
             {caseStudies.map((study, index) => (
-              <Card key={index} className="shadow-soft hover:shadow-glow transition-smooth bg-white/5 border-white/10 hover:bg-white/10 animate-fade-up">
+              <Card key={index} className="shadow-soft hover:shadow-glow transition-smooth bg-white border-[#111111]/10 hover:border-[#FFD84D] animate-fade-up">
                 <CardHeader>
                   <div className="flex flex-wrap items-center gap-2 mb-4">
-                    <Badge variant="secondary" className="bg-[#FFD84D]/20 text-[#FFD84D] border-none">{study.industry}</Badge>
-                    <Badge variant="outline" className="border-[#D1D1D1]/30 text-[#D1D1D1]">{study.location}</Badge>
+                    <Badge variant="secondary" className="bg-[#FFD84D]/20 text-[#111111] border-none">{study.industry}</Badge>
+                    <Badge variant="outline" className="border-[#111111]/30 text-[#111111]">{study.location}</Badge>
                   </div>
-                  <CardTitle className="font-poppins text-2xl mb-2 text-white">{study.client}</CardTitle>
+                  <CardTitle className="font-poppins text-2xl mb-2 text-[#111111]">{study.client}</CardTitle>
                   <div className="space-y-4 mt-4">
                     <div>
                       <h3 className="font-semibold text-sm text-[#FFD84D] uppercase mb-2">
                         Challenge
                       </h3>
-                      <CardDescription className="text-base text-[#D1D1D1]">{study.challenge}</CardDescription>
+                      <CardDescription className="text-base text-[#5B5B5B]">{study.challenge}</CardDescription>
                     </div>
                     <div>
                       <h3 className="font-semibold text-sm text-[#FFD84D] uppercase mb-2">
                         Solution
                       </h3>
-                      <CardDescription className="text-base text-[#D1D1D1]">{study.solution}</CardDescription>
+                      <CardDescription className="text-base text-[#5B5B5B]">{study.solution}</CardDescription>
                     </div>
                   </div>
                 </CardHeader>
@@ -129,11 +129,11 @@ const CaseStudies = () => {
                     {study.results.map((result, resultIndex) => (
                       <div
                         key={resultIndex}
-                        className="flex flex-col items-center text-center p-4 rounded-lg bg-white/5 border border-white/10"
+                        className="flex flex-col items-center text-center p-4 rounded-lg bg-[#F5F5F5] border border-[#111111]/10"
                       >
                         <result.icon className="h-8 w-8 text-[#FFD84D] mb-3" />
                         <p className="text-2xl font-bold mb-1 text-[#FFD84D]">{result.value}</p>
-                        <p className="text-sm text-[#D1D1D1]">{result.label}</p>
+                        <p className="text-sm text-[#5B5B5B]">{result.label}</p>
                       </div>
                     ))}
                   </div>
